@@ -26,7 +26,7 @@ export function createGame() {
         current_tick: 0,
         total_ticks: 10400,
         population: 1600000,
-        upgrades: init_upgrades(),
+        upgrades: initUpgrades(),
         end_game: false,
     }
 }
