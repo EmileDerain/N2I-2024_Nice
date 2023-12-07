@@ -42,11 +42,13 @@ body{
 .time-bar{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 10vh;
+    justify-content: left;
+    height: 8vh;
     width: 83vw;
-    /*background-color: red;*/
-    /*margin: 1vh;*/
+    background-color: red;
+    margin: 2vh;
+    margin-bottom: 1vh;
+    margin-bottom: 0vh;
 }
 
 
@@ -54,8 +56,9 @@ body{
     height: 3vh;
     width: 75vw;
     background-color: pink;
-    /*margin: 1vh;*/
-}
+    margin: 1vh;
+    animation: progressAnimation 3s linear forwards;
+}   
 
 .flex-verti-2{
     /*box-sizing: border-box;*/
@@ -76,4 +79,13 @@ body{
     background-color: cadetblue;
     /*margin: 1vh;*/
     border: solid black;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
