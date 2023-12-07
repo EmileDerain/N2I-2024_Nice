@@ -4,62 +4,161 @@
     "name": "Elevage",
     "cost": 100,
     "money_generated": 10,
-    "temperature_generated": 0.001
+    "temperature_generated": 0.001,
+    "unlock_year": 1882,
+    "image_path": "elevage.png"
   },
   {
     "id": 2,
-    "name": "Peche",
+    "name": "Pêche",
     "cost": 120,
     "money_generated": 12,
-    "temperature_generated": 0.002
+    "temperature_generated": 0.002,
+    "unlock_year": 1882,
+    "image_path": "peche.png"
   },
   {
     "id": 3,
     "name": "Agriculture",
     "cost": 150,
     "money_generated": 15,
-    "temperature_generated": 0.003
+    "temperature_generated": 0.003,
+    "unlock_year": 1882,
+    "image_path": "agriculture.png"
   },
   {
     "id": 4,
     "name": "Central Charbon",
     "cost": 200,
     "money_generated": 20,
-    "temperature_generated": 0.005
+    "temperature_generated": 0.005,
+    "unlock_year": 1882,
+    "image_path": "central_charbon.png"
   },
   {
     "id": 5,
     "name": "Central Nucleaire",
     "cost": 300,
     "money_generated": 30,
-    "temperature_generated": 0.008
+    "temperature_generated": 0.008,
+    "unlock_year": 1963,
+    "image_path": "central_nucleaire.png"
   },
   {
     "id": 6,
-    "name": "Renouvelable",
+    "name": "Chariotte à cheval",
     "cost": 250,
     "money_generated": 25,
-    "temperature_generated": 0.004
+    "temperature_generated": 0.004,
+    "unlock_year": 1882,
+    "image_path": "chariotte_cheval.png"
   },
   {
     "id": 7,
     "name": "Voiture",
     "cost": 50,
     "money_generated": 5,
-    "temperature_generated": 0.001
+    "temperature_generated": 0.001,
+    "unlock_year": 1890,
+    "image_path": "voiture.png"
   },
   {
     "id": 8,
     "name": "Train",
     "cost": 80,
     "money_generated": 8,
-    "temperature_generated": 0.002
+    "temperature_generated": 0.002,
+    "unlock_year": 1890,
+    "image_path": "train.png"
   },
   {
     "id": 9,
     "name": "Avion",
     "cost": 200,
     "money_generated": 25,
-    "temperature_generated": 0.01
+    "temperature_generated": 0.01,
+    "unlock_year": 1909,
+    "image_path": "avion.png"
+  },
+  {
+    "id": 10,
+    "name": "Barrage",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1928,
+    "image_path": "barrage.png"
+  },
+  {
+    "id": 11,
+    "name": "2 Chevaux",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1948,
+    "image_path": "2_chevaux.png"
+  },
+  {
+    "id": 12,
+    "name": "Vol commercial",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1950,
+    "image_path": "vol_commercial.png"
+  },
+  {
+    "id": 13,
+    "name": "Elevage intensif",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1970,
+    "image_path": "elevage_intensif.png"
+  },
+  {
+    "id": 14,
+    "name": "Pêche intensive",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1970,
+    "image_path": "peche_intensive.png"
+  },
+  {
+    "id": 15,
+    "name": "Porte conteneur",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1970,
+    "image_path": "porte_conteneur.png"
+  },
+  {
+    "id": 16,
+    "name": "SUV",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 1997,
+    "image_path": "suv.png"
+  },
+  {
+    "id": 17,
+    "name": "Voiture électrique",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 2012,
+    "image_path": "voiture_electrique.png"
+  },
+  {
+    "id": 18,
+    "name": "Agriculture bio",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01,
+    "unlock_year": 2000,
+    "image_path": "agriculture_bio.png"
   }
 ]
