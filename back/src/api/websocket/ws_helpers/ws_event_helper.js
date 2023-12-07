@@ -1,7 +1,12 @@
 export function onConnection(ws) {
     // TODO : Add ws to player
     console.log("[+] Client connected.");
-    ws.send(JSON.stringify({ "op": 1 }))
+    ws.send(JSON.stringify({ 
+        "op": 1,
+        "d": {
+            "id": 0
+        }
+    }))
 }
 
 export function onMessage(ws, data) {
