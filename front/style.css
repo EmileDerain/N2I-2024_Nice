@@ -66,6 +66,7 @@ body{
     /*justify-content: flex-start;*/
     /*border: red solid;*/
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .carte{
