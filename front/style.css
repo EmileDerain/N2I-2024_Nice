@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+
+.flex-horiz{
+    display: flex;
+    flex-direction: row;
+    background-color:  #000467;
+    justify-content: center;
+}
+
+.flex-verti-1{
+    display: flex;
+    flex-direction: column;
+    background-color: #000467;
+    justify-content: flex-start;
+}
+
+.flex-verti-2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #000467;
+    justify-content: flex-start;
+    border: red solid;
+}
+
+.gros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 83vw;
+    background-color: green;
+    /*opacity: 5%;*/
+    /*margin: 1vh;*/
+}
+
+.img-terre{
+    max-width : 80%;
+    max-height :80%;
+}
+
+.petit{
+    height: 10vh;
+    width: 17vw;
+    background-color: burlywood;
+    /*margin: 1vh;*/
+}
+
+.time_bar{
+    height: 10vh;
+    width: 17vw;
+    background-color: red;
+    /*margin: 1vh;*/
+}
+
+.carte{
+    box-sizing: border-box;
+    height: 20vh;
+    width: 17vw;
+    background-color: cadetblue;
+    /*margin: 1vh;*/
+    border: solid black;
+}
