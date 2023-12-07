@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Elevage",
+    "cost": 100,
+    "money_generated": 10,
+    "temperature_generated": 0.001
+  },
+  {
+    "id": 2,
+    "name": "Peche",
+    "cost": 120,
+    "money_generated": 12,
+    "temperature_generated": 0.002
+  },
+  {
+    "id": 3,
+    "name": "Agriculture",
+    "cost": 150,
+    "money_generated": 15,
+    "temperature_generated": 0.003
+  },
+  {
+    "id": 4,
+    "name": "Central Charbon",
+    "cost": 200,
+    "money_generated": 20,
+    "temperature_generated": 0.005
+  },
+  {
+    "id": 5,
+    "name": "Central Nucleaire",
+    "cost": 300,
+    "money_generated": 30,
+    "temperature_generated": 0.008
+  },
+  {
+    "id": 6,
+    "name": "Renouvelable",
+    "cost": 250,
+    "money_generated": 25,
+    "temperature_generated": 0.004
+  },
+  {
+    "id": 7,
+    "name": "Voiture",
+    "cost": 50,
+    "money_generated": 5,
+    "temperature_generated": 0.001
+  },
+  {
+    "id": 8,
+    "name": "Train",
+    "cost": 80,
+    "money_generated": 8,
+    "temperature_generated": 0.002
+  },
+  {
+    "id": 9,
+    "name": "Avion",
+    "cost": 200,
+    "money_generated": 25,
+    "temperature_generated": 0.01
+  }
+]
