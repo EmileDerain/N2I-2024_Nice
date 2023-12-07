@@ -8,6 +8,7 @@ export function initUpgrades() {
             cost: upgrade_data.cost,
             money_generated: upgrade_data.money_generated,
             temperature_generated: upgrade_data.temperature_generated,
+            unlock_year: upgrade_data.unlock_year,
             quantity: 0,
         }
     });
