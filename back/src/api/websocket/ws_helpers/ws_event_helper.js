@@ -1,8 +1,10 @@
-import { createUser, findUser } from "../../../UserService.js";
+import { createUser, findUser, removeUser } from "../../../UserService.js";
+import { onGameTickEvent } from "./event_handler/game_tick_event_handler.js";
 import { onUpgradeEvent } from "./event_handler/upgrade_event_handler.js";
 
 const opEvents = [
-    { "op": 10, "function": onUpgradeEvent }
+    { "op": 10, "function": onUpgradeEvent },
+    { "op": 11, "function": onGameTickEvent }
 ]
 
 export function onConnection(ws) {
@@ -60,7 +62,7 @@ export function onMessage(ws, data) {
 }
 
 export function onClose(ws) {
-    removeClient(ws);
+    removeUser(ws);
     console.log("[-] Client is disconnected.");
 }
 

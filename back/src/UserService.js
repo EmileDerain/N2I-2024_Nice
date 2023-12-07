@@ -17,3 +17,7 @@ export function createUser(ws) {
 export function findUser(userId) {
     return users.find(user => user.id === userId);
 }
+
+export function removeUser(ws) {
+    users = users.filter(user => user.ws !== ws);
+}
