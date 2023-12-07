@@ -1,4 +1,9 @@
 import { init_upgrades } from "./upgrade_service.js";
+import {createUser} from "../user_service.js";
+
+export function initGame(ws) {
+    return createUser(ws);
+}
 
 export function createGame() {
     return {
