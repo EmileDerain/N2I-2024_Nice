@@ -1,4 +1,5 @@
 import { sendError } from "../ws_event_helper.js";
+import {buyUpgrade} from "../../../../game/game_service.js";
 
 export function onUpgradeEvent(user, d) {
     const upgradeId = d.upgradeId;
@@ -9,4 +10,5 @@ export function onUpgradeEvent(user, d) {
     }
 
     console.log("Upgrade event, upgradeId is " + upgradeId);
+    const upgradeSuccess = buyUpgrade(user.game, upgradeId)
 }
