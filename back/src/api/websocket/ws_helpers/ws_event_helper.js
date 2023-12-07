@@ -1,16 +1,18 @@
+import { createUser, findUser, removeUser } from "../../../user_service.js";
+import { onTickEvent } from "./event_handler/tick_event_handler.js";
 import { onUpgradeEvent } from "./event_handler/upgrade_event_handler.js";
 
 const opEvents = [
-    { "op": 10, "function": onUpgradeEvent }
+    { "op": 10, "function": onUpgradeEvent },
+    { "op": 11, "function": onTickEvent }
 ]
 
 export function onConnection(ws) {
-    // TODO : Add ws to player
     console.log("[+] Client connected.");
     ws.send(JSON.stringify({ 
         "op": 1,
         "d": {
-            "id": 0
+            "userId": createUser(ws)
         }
     }))
 }
@@ -20,22 +22,38 @@ export function onMessage(ws, data) {
         const dataString = data.toString('utf-8'); // Convert buffer in string
         const socketMessage = JSON.parse(dataString); // Parsing JSON
 
+        const userId = socketMessage.userId;
         const op = socketMessage.op;
-        if(op == null && typeof(op) !== "number") {
-            sendError(ws, "Invalid op format");
+
+        // Check userId format
+        if(userId === undefined  || typeof(userId) !== "string") {
+            sendError(ws, "Invalid userId format.");
             return;
         }
 
-        // Search event from event list
-        const event = opEvents.find(opEvent => opEvent.op === op);
+        // Getting user form userId
+        const user = findUser(socketMessage.userId);
+        if(user === undefined) {
+            sendError(ws, "userId not found.");
+            return;
+        }
 
+        // Check op format
+        if(op === undefined || typeof(op) !== "number") {
+            sendError(ws, "Invalid op format.");
+            return;
+        }
+
+        // Search event from event list with the given op
+        const event = opEvents.find(opEvent => opEvent.op === op);
         if(event === undefined) {
             sendError(ws, "Unknown op.");
             return;
         }
 
-        event.function(ws, socketMessage.d);
-    } 
+        // Calling event function
+        event.function(user, socketMessage.d);
+    }
     
     catch (e) {
         sendError(ws, e.toString());
@@ -44,7 +62,7 @@ export function onMessage(ws, data) {
 }
 
 export function onClose(ws) {
-    removeClient(ws);
+    removeUser(ws);
     console.log("[-] Client is disconnected.");
 }
 
