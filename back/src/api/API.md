@@ -14,7 +14,21 @@ If the connection is successful, you'll receive an `Hello Event`.
 {
   "op": 1
   "d": {
-    "userId": 1203
+    "userId": 101112
+  }
+}
+```
+
+### Upgrade Event
+Event sent when the client try to buy an upgrade.
+
+#### Example of Invoke Event
+```
+{
+  "op": 10,
+  "userId": 101112,
+  "d": {
+    "upgradeId": 1
   }
 }
 ```
