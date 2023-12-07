@@ -1,10 +1,10 @@
 import { createUser, findUser, removeUser } from "../../../UserService.js";
-import { onGameTickEvent } from "./event_handler/game_tick_event_handler.js";
+import { onTickEvent } from "./event_handler/tick_event_handler.js";
 import { onUpgradeEvent } from "./event_handler/upgrade_event_handler.js";
 
 const opEvents = [
     { "op": 10, "function": onUpgradeEvent },
-    { "op": 11, "function": onGameTickEvent }
+    { "op": 11, "function": onTickEvent }
 ]
 
 export function onConnection(ws) {
