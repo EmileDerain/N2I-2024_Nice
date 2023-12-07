@@ -1,4 +1,5 @@
-import { createUser, findUser, removeUser } from "../../../user_service.js";
+import { initGame } from "../../../game/game_service.js";
+import { findUser, removeUser } from "../../../user_service.js";
 import { onTickEvent } from "./event_handler/tick_event_handler.js";
 import { onUpgradeEvent } from "./event_handler/upgrade_event_handler.js";
 
@@ -9,11 +10,10 @@ const opEvents = [
 
 export function onConnection(ws) {
     console.log("[+] Client connected.");
+
     ws.send(JSON.stringify({ 
         "op": 1,
-        "d": {
-            "userId": createUser(ws)
-        }
+        "d": initGame(ws)
     }))
 }
 
