@@ -57,7 +57,7 @@ body{
     width: 75vw;
     background-color: pink;
     margin: 1vh;
-    animation: progressAnimation 3s linear forwards;
+    animation: progressAnimation 300s linear forwards;
 }   
 
 .flex-verti-2{
