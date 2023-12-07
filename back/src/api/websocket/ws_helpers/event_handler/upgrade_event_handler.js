@@ -10,3 +10,10 @@ export function onUpgradeEvent(user, d) {
 
     console.log("Upgrade event, upgradeId is " + upgradeId);
 }
+
+export function sendConfirmUpgradeEvent(user, confirmationPayload) {
+    user.ws.send(JSON.stringify({
+        op: 3,
+        d: confirmationPayload
+    }));
+}
