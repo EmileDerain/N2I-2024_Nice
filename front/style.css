@@ -21,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 83vw;
+    width: 80vw;
     /*background-color: green;*/
     /*opacity: 5%;*/
     /*margin: 1vh;*/
@@ -34,7 +34,7 @@ body{
 
 .petit{
     height: 10vh;
-    width: 17vw;
+    width: 20vw;
     background-color: burlywood;
     /*margin: 1vh;*/
 }
@@ -44,7 +44,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 10vh;
-    width: 83vw;
+    width: 80vw;
     /*background-color: red;*/
     /*margin: 1vh;*/
 }
@@ -71,8 +71,41 @@ body{
 .carte{
     box-sizing: border-box;
     height: 15vh;
-    width: 17vw;
+    width: 20vw;
     background-color: cadetblue;
     /*margin: 1vh;*/
-    border: solid black;
+    border: solid black 2px;
+}
+
+.carte-button{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.carte-button-image-left{
+    box-sizing: border-box;
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    border: black solid 1px;
+}
+
+.carte-button-image-left:hover{
+    cursor: pointer;
+}
+
+.carte-button-image-right{
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border: black solid 1px;
+}
+
+.carte-button-image-right:hover{
+    cursor: pointer;
 }
