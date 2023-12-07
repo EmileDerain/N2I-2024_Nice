@@ -1,0 +1,9 @@
+version: '3'
+services:
+  back:
+    image: green_of_earth-back
+    container_name: green_of_earth-back
+    build: .
+    ports:
+      - "8000:8000" # Shared : In Docker
+    restart: always
