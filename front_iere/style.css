@@ -1,0 +1,34 @@
+.flex-horiz{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    justify-content: center;
+}
+
+.flex-verti{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    justify-content: center;
+}
+
+.gros{
+    height: 40vh;
+    width: 60vh;
+    background-color: greenyellow;
+    margin: 1vh;
+}
+
+.petit{
+    height: 10vh;
+    width: 30vh;
+    background-color: burlywood;
+    margin: 1vh;
+}
+
+.carte{
+    height: 20vh;
+    width: 30vh;
+    background-color: cadetblue;
+    margin: 1vh;
+}
