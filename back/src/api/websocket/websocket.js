@@ -1,8 +1,8 @@
 import { WebSocketServer } from 'ws';
 import { onClose, onConnection, onMessage } from './ws_helpers/ws_event_helper.js';
 
-export function startWebSocket() {
-    const wss = new WebSocketServer({ port: 8080 });
+export function startWebSocket(port) {
+    const wss = new WebSocketServer({ port: port });
     
     wss.on('listening', () => console.log('Server listening on port 8080'));
 

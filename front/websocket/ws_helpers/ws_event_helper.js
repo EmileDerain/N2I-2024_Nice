@@ -1,4 +1,5 @@
-import { onConnectionEvent } from "./event_handler/connection_event_handler";
+import { onConnectionEvent } from "./event_handler/connection_event_handler.js";
+
 
 const opEvents = [
     { "op": 1, "function": onConnectionEvent }

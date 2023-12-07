@@ -1,4 +1,4 @@
-import { setUserId } from "../../game/state";
+import { setUserId } from "../../game/state.js";
 
 export function onConnectionEvent(d) {
     const userId = d.userId;
