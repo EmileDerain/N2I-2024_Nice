@@ -11,3 +11,7 @@ export function createUser(ws) {
     users.push(user);
     return user;
 }
+
+export function findUser(userId) {
+    return users.find(user => user.id === userId);
+}
