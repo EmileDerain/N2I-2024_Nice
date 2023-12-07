@@ -1,8 +1,19 @@
-import { init_upgrades } from "./upgrade_service.js";
+import {buyUpgrade, calculateTotalGeneratedPerTick, initUpgrades} from "./upgrade_service.js";
 import {createUser} from "../user_service.js";
 
 export function initGame(ws) {
-    return createUser(ws);
+    const user = createUser(ws);
+    const gameInfo = {
+        userId: user.id,
+        game: {
+            money: user.game.money,
+            totalMoney: user.game.total_money,
+            temperature: user.game.temperature,
+            startYear: user.game.start_year,
+            endYear: user.game.end_year,
+            upgrades: user.game.upgrades,
+        }
+    }
 }
 
 export function createGame() {
@@ -24,7 +35,7 @@ export function onGameTick(game) {
     if (end_game) {
         return game;
     }
-    const total_generated_per_tick = calculate_total_generated_per_tick(game.upgrades);
+    const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
     game.money += total_generated_per_tick.money - game.population * 0.001;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
@@ -34,11 +45,11 @@ export function onGameTick(game) {
     return game;
 }
 
-export function buyUpgrade(game, upgrade_id) {
+export function onBuyUpgrade(game, upgrade_id) {
     if (game.money < game.upgrades[upgrade_id].cost) {
         return false;
     }
-    buy_upgrade(game.upgrades, upgrade_id);
+    buyUpgrade(game.upgrades, upgrade_id);
     game.money -= game.upgrades[upgrade_id].cost;
     return true;
 }
