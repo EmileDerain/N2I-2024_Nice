@@ -1,8 +1,7 @@
-import { readJSONFile } from '../utilities/JsonHelper.js';
+import upgrades_data from "./data/Upgrades.json" assert {type: "json"};
 
 export function init_upgrades() {
     const upgrades = {};
-    const upgrades_data = readJSONFile('./src/game/upgrades.json');
     upgrades_data.forEach(upgrade_data => {
         upgrades[upgrade_data.id] = {
             name: upgrade_data.name,
