@@ -21,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 83vw;
+    width: 80vw;
     /*background-color: green;*/
     /*opacity: 5%;*/
     /*margin: 1vh;*/
@@ -34,7 +34,7 @@ body{
 
 .petit{
     height: 10vh;
-    width: 17vw;
+    width: 20vw;
     background-color: burlywood;
     /*margin: 1vh;*/
 }
@@ -42,12 +42,11 @@ body{
 .time-bar{
     display: flex;
     align-items: center;
-    justify-content: left;
-    height: 8vh;
+    justify-content: center;
+    height: 10vh;
     width: 80vw;
     /*background-color: red;*/
-    margin: 2vh;
-    margin-bottom: 1vh;
+    /*margin: 2vh;*/
     margin-bottom: 0vh;
 }
 
@@ -57,14 +56,14 @@ body{
     width: 70vw;
     background-color: rgb(39, 37, 37);
     margin: 1vh;
-}   
+}
 
 .time-bar-inside{
     height: 3vh;
     width: 70vw;
     background-color: pink;
     animation: progressAnimation 300s linear forwards;
-}   
+}
 
 .flex-verti-2{
     /*box-sizing: border-box;*/
@@ -72,7 +71,7 @@ body{
     flex-direction: column;
     background-color: #000467;
     height: 100vh;
-    width: 15vw;
+    width: 20vw;
     /*justify-content: flex-start;*/
     /*border: red solid;*/
     overflow-y: auto;
@@ -82,10 +81,43 @@ body{
 .carte{
     box-sizing: border-box;
     height: 15vh;
-    width: 17vw;
+    width: 20vw;
     background-color: cadetblue;
     /*margin: 1vh;*/
-    border: solid black;
+    border: solid black 2px;
+}
+
+.carte-button{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.carte-button-image-left{
+    box-sizing: border-box;
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    border: black solid 1px;
+}
+
+.carte-button-image-left:hover{
+    cursor: pointer;
+}
+
+.carte-button-image-right{
+    box-sizing: border-box;
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    border: black solid 1px;
+}
+
+.carte-button-image-right:hover{
+    cursor: pointer;
 }
 
 @keyframes progressAnimation {
