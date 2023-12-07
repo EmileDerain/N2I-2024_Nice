@@ -1,17 +1,14 @@
-import Fastify from 'fastify'
-const fastify = Fastify({
-  logger: true
-})
+import { fastify } from "./rest/fastify.js";
+import { startWebSocket } from "./websocket/websocket.js";
 
-// Declare a route
-fastify.get('/', async function handler (request, reply) {
-  return { hello: 'world' }
-})
-
-// Run the server!
 try {
-  await fastify.listen({ port: 3008 })
-} catch (err) {
-  fastify.log.error(err)
-  process.exit(1)
+    startWebSocket();  // Setting up Websocket
+    await fastify.listen({ port: 3008 })  // Setting up REST API
+} 
+
+catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
 }
+  
+  
