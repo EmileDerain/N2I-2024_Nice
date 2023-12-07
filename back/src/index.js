@@ -2,7 +2,7 @@ import { fastify } from "./api/rest/fastify.js";
 import { startWebSocket } from "./api/websocket/websocket.js";
 
 try {
-    startWebSocket();  // Setting up Websocket
+    startWebSocket(3007);  // Setting up Websocket
     await fastify.listen({ port: 3008 })  // Setting up REST API
 } 
 
