@@ -1,4 +1,5 @@
 import { WebSocketServer } from 'ws';
+import { onClose, onConnection, onMessage } from './ws_helpers/ws_event_helper.js';
 
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -7,9 +8,9 @@ export function startWebSocket() {
     wss.on('listening', () => console.log('Server listening on port 8080'));
 
     wss.on('connection', (ws) => {
-        console.log("onConnection")
-        ws.on('message', (data) => console.log("onMessage(ws, data)"));
-        ws.on('close', () => console.log("onClose(ws)"));
+        onConnection(ws);
+        ws.on('message', (data) => onMessage(ws, data));
+        ws.on('close', () => onClose(ws));
     });
 }
 

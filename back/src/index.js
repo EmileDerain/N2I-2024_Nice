@@ -1,5 +1,5 @@
-import { fastify } from "./rest/fastify.js";
-import { startWebSocket } from "./websocket/websocket.js";
+import { fastify } from "./api/rest/fastify.js";
+import { startWebSocket } from "./api/websocket/websocket.js";
 
 try {
     startWebSocket();  // Setting up Websocket
