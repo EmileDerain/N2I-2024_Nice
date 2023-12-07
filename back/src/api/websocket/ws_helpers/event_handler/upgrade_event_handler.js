@@ -1,5 +1,5 @@
 import { sendError } from "../ws_event_helper.js";
-import {buyUpgrade} from "../../../../game/game_service.js";
+import {onBuyUpgrade} from "../../../../game/game_service.js";
 
 export function onUpgradeEvent(user, d) {
     const upgradeId = d.upgradeId;
@@ -10,7 +10,11 @@ export function onUpgradeEvent(user, d) {
     }
 
     console.log("Upgrade event, upgradeId is " + upgradeId);
-    const upgradeSuccess = buyUpgrade(user.game, upgradeId)
+    const upgradeSuccess = onBuyUpgrade(user.game, upgradeId);
+    sendConfirmUpgradeEvent(user, {
+        upgradeId: upgradeId,
+        quantity: user.game.upgrades[upgradeId].quantity,
+    })
 }
 
 export function sendConfirmUpgradeEvent(user, confirmationPayload) {
