@@ -1,10 +1,11 @@
 import { createGame } from './game/GameService';
+import { generateRandomString } from "./utilities/Utils.js";
 
 let users = [];
 
-function createUser(id) {
+export function createUser(ws) {
     let user = {
-        id: id,
+        id: generateRandomString(16),
         game: createGame()
     }
     users.push(user);
