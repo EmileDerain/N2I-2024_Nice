@@ -1,5 +1,5 @@
-import { createGame } from './game/GameService.js';
-import { generateRandomString } from "./utilities/Utils.js";
+import { createGame } from './game/game_service.js';
+import { generateRandomString } from "./utilities/utils.js";
 
 let users = [];
 

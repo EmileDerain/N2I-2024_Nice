@@ -1,4 +1,4 @@
-import { init_upgrades } from "./UpgradeService.js";
+import { init_upgrades } from "./upgrade_service.js";
 
 export function createGame() {
     return {
@@ -15,7 +15,7 @@ export function createGame() {
     }
 }
 
-export function pass_game_tick(game) {
+export function passGameTick(game) {
     if (end_game) {
         return false;
     }
@@ -29,7 +29,7 @@ export function pass_game_tick(game) {
     return check_game_over(game);
 }
 
-export function buy_upgrade(game, upgrade_id) {
+export function buyUpgrade(game, upgrade_id) {
     if (game.money < game.upgrades[upgrade_id].cost) {
         return;
     }
@@ -37,7 +37,7 @@ export function buy_upgrade(game, upgrade_id) {
     game.money -= game.upgrades[upgrade_id].cost;
 }
 
-export function check_game_over(game) {
+export function checkGameOver(game) {
     const end_game = game.temperature < 1.5 && game.money > 0 && game.current_tick < game.total_ticks
     game.end_game = end_game;
     return end_game;

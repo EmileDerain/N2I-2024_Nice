@@ -1,4 +1,4 @@
-import { createUser, findUser, removeUser } from "../../../UserService.js";
+import { createUser, findUser, removeUser } from "../../../user_service.js";
 import { onTickEvent } from "./event_handler/tick_event_handler.js";
 import { onUpgradeEvent } from "./event_handler/upgrade_event_handler.js";
 

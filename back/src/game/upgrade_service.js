@@ -1,6 +1,6 @@
-import upgrades_data from "./data/Upgrades.json" assert {type: "json"};
+import upgrades_data from "./data/upgrades.json" assert {type: "json"};
 
-export function init_upgrades() {
+export function initUpgrades() {
     const upgrades = {};
     upgrades_data.forEach(upgrade_data => {
         upgrades[upgrade_data.id] = {
@@ -14,11 +14,11 @@ export function init_upgrades() {
     return upgrades;
 }
 
-export function buy_upgrade(upgrades, upgrade_id) {
+export function buyUpgrade(upgrades, upgrade_id) {
     upgrades[upgrade_id].quantity += 1;
 }
 
-export function calculate_total_generated_per_tick(upgrades) {
+export function calculateTotalGeneratedPerTick(upgrades) {
     let total_generated = {
         money: 0,
         temperature: 0,
