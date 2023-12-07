@@ -9,20 +9,24 @@ export function createGame() {
         end_year: 2100,
         current_tick: 0,
         total_ticks: 10400,
+        population: 1600000,
         upgrades: init_upgrades(),
+        end_game: false,
     }
 }
 
 export function pass_game_tick(game) {
-    if (check_game_over(game)) {
+    if (end_game) {
         return false;
     }
     const total_generated_per_tick = calculate_total_generated_per_tick(game.upgrades);
-    game.money += total_generated_per_tick.money;
+    game.money += total_generated_per_tick.money - game.population * 0.001;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
-    return true;
+    game.population += 50000;
+
+    return check_game_over(game);
 }
 
 export function buy_upgrade(game, upgrade_id) {
@@ -34,5 +38,7 @@ export function buy_upgrade(game, upgrade_id) {
 }
 
 export function check_game_over(game) {
-    return game.temperature < 1.5 && game.money > 0 && game.current_tick < game.total_ticks
+    const end_game = game.temperature < 1.5 && game.money > 0 && game.current_tick < game.total_ticks
+    game.end_game = end_game;
+    return end_game;
 }
