@@ -3,6 +3,8 @@ import {createUser} from "../user_service.js";
 
 export function initGame(ws) {
     const user = createUser(ws);
+    const upgradesList = Object.entries(user.game.upgrades).map(([id, data]) => ({ id: parseInt(id), ...data }));
+
     const gameInfo = {
         userId: user.id,
         game: {
@@ -11,7 +13,7 @@ export function initGame(ws) {
             temperature: user.game.temperature,
             startYear: user.game.start_year,
             endYear: user.game.end_year,
-            upgrades: user.game.upgrades,
+            upgrades:upgradesList,
         }
     }
     return gameInfo;

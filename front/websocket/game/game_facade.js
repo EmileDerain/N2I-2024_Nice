@@ -1,4 +1,4 @@
 export function initGame(game) {
     console.log(game);
-    // TODO : Emile
+    document.getElementById("c1").innerText = game.upgrades[0].name;
 }
