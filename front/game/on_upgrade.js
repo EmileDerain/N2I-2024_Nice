@@ -1,4 +1,6 @@
 export function onUpgrade(upgrade) {
     console.log(upgrade);
-    document.getElementById("upgrade_id_" + upgrade.id).innerText = upgrade.quantity
+    // console.log("upgrade_id_" + upgrade.upgradeId);
+    // console.log(document.getElementById("upgrade_id_" + upgrade.upgradeId));
+    document.getElementById("upgrade_id_" + upgrade.upgradeId).innerText = upgrade.quantity;
 }
