@@ -40,6 +40,6 @@ function notifManagement(){
 
 function notifCreator(titre, texte){
     document.getElementById("notif-titre").innerText=titre;
-    document.getElementById("notif-texte").innerText=texte;
+    document.getElementById("notif-text").innerText=texte;
     document.getElementById("notif").classList.remove("hide")
 }
