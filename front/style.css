@@ -80,7 +80,7 @@ body {
     padding: 1vh;
 }
 
-.notif-text{
+#notif-text{
     padding: 2vh;
     text-align: justify;
 

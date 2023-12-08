@@ -5,7 +5,7 @@ import {sendEndGameEvent} from "./end_game_event_handler.js";
 export function onTickEvent(user) {
     const game = onGameTick(user.game);
     const scores = {
-        money: game.money,
+        money: game.money.toFixed(2),
         total_money: game.total_money,
         temperature: game.temperature.toFixed(2),
         year: calculate_current_game_year(game),

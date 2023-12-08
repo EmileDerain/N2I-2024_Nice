@@ -31,5 +31,8 @@ export function traduceMoney(money) {
     } else if (money >= 1000) {
         moneyTraduced = (money / 1000).toFixed(2) + "K";
     }
+    else{
+        moneyTraduced = money.toFixed(2);
+    }
     return moneyTraduced;
 }
