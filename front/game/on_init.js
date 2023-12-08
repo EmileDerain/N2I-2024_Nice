@@ -7,7 +7,7 @@ export function onInit(game) {
     // document.getElementById("c1").innerText = game.upgrades[0].name;
 
     var newDivVert = document.getElementById("list-carte")
-    tickInterval = setInterval(sendTick, 100)
+    tickInterval = setInterval(sendTick, 1000)
 
     for (let i = 0; i < game.upgrades.length; i++) {
         var newDivGlobal = document.createElement("div");
