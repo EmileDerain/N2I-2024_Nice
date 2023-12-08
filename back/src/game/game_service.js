@@ -21,8 +21,8 @@ export function initGame(ws) {
 
 export function createGame() {
     return {
-        money: 0,
-        total_money: 0,
+        money: 1000,
+        total_money: 1000,
         temperature: 0,
         start_year: 1900,
         end_year: 2100,
