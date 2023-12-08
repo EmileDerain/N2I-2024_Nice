@@ -33,14 +33,14 @@ export function createGame() {
         start_year: 1882,
         end_year: 2100,
         current_tick: 0,
-        total_ticks: 2616,
+        total_ticks: 218,
         population: 0,
         upgrades: initUpgrades(1882),
         end_game: false,
     }
 }
 
-export function onGameTick(game) {
+export function onGameTick(game, user) {
     if (game.end_game) {
         return game;
     }
@@ -51,7 +51,7 @@ export function onGameTick(game) {
     game.current_tick += 1;
     game.population += 60000;
     checkGameOver(game);
-    checkUpgradeUnlock(game.upgrades, calculate_current_game_year(game));
+    checkUpgradeUnlock(game.upgrades, calculate_current_game_year(game), user);
     return game;
 }
 
@@ -71,7 +71,7 @@ export function checkGameOver(game) {
 }
 
 export function calculate_current_game_year(game) {
-    return game.start_year + game.current_tick / 12;
+    return game.start_year + game.current_tick;
 }
 
 export function getEndGameStatus(game) {

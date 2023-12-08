@@ -2,7 +2,7 @@ FROM node:alpine
 LABEL maintainer="Kilian Bonnet <kilian.bonnet1@etu.univ-cotedazur.fr>"
 
 WORKDIR /app
-COPY ../front /app 
+COPY ./front /app 
 
 RUN npm install -g http-server
 
