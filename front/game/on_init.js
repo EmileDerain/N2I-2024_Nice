@@ -1,3 +1,5 @@
+import {sendUpgrade} from "../websocket/ws_helpers/event_sender.js";
+
 export function onInit(game) {
     console.log("game", game);
     // document.getElementById("c1").innerText = game.upgrades[0].name;
@@ -10,6 +12,12 @@ export function onInit(game) {
 
         var newButtonGlobal = document.createElement("button")
         newButtonGlobal.classList.add("carte-button")
+
+        newButtonGlobal.addEventListener('click', function() {
+            console.log("game.upgrades[i].id", game.upgrades[i].id),
+            sendUpgrade(game.upgrades[i].id)
+        });
+
 
         // var newDivIma1 = document.createElement("div");
         // var newImageIma1 = document.createElement("img")
@@ -93,6 +101,7 @@ export function onInit(game) {
 
         newDiv32.classList.add("carte-button-image-right-argent");
         newDiv33.classList.add("carte-button-image-right-argent-left");
+        newDiv34.id = "upgrade_id_" + game.upgrades[i].id
 
         newImage31.src = "ressources/compt.png"
         newImage31.classList.add("argent-left")
