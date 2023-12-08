@@ -5,7 +5,7 @@ import { onUpgradeUnlock } from "../../game/on_upgrade_unlock.js";
 import { onConnectionEvent } from "./connection_event_handler.js";
 
 const opEvents = [
-    { "op": 0, "function": onError }
+    { "op": 0, "function": onError },
     { "op": 1, "function": onConnectionEvent },
     { "op": 2, "function": onScore},
     { "op": 3, "function": onUpgrade },
