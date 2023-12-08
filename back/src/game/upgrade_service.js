@@ -36,7 +36,7 @@ export function calculateTotalGeneratedPerTick(upgrades) {
     return total_generated;
 }
 
-export function checkUpgradeUnlock(upgrades, current_year) {
+export function checkUpgradeUnlock(upgrades, current_year, user) {
     Object.values(upgrades).forEach(upgrade => {
         if (!upgrade.isUnlock && upgrade.unlock_year <= current_year) {
             sendUpgradeUnlockEvent(user, upgrade.id);
