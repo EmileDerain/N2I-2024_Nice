@@ -14,6 +14,8 @@ export function onUpgradeEvent(user, d) {
     sendConfirmUpgradeEvent(user, {
         upgradeId: upgradeId,
         quantity: user.game.upgrades[upgradeId].quantity,
+        cost: user.game.upgrades[upgradeId].cost,
+        temperature_generated: user.game.upgrades[upgradeId].temperature_generated,
     })
 }
 

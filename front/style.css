@@ -10,11 +10,10 @@ body {
 .flex-horiz {
     display: flex;
     flex-direction: row;
-    background-color: #000467;
     justify-content: center;
 }
 
-.topHeader{
+.topHeader {
     display: flex;
     flex-direction: row;
     background-color: #648d22;
@@ -25,29 +24,41 @@ body {
 .flex-verti-1 {
     display: flex;
     flex-direction: column;
-    background-color: #000467;
     justify-content: flex-start;
 }
 
 .gros {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
     width: 80vw;
-    /*background-color: green;*/
-    /*opacity: 5%;*/
-    /*margin: 1vh;*/
+    /* background-color: green; */
+    /* opacity: 5%; */
+    /* margin: 1vh; */
 }
 
 .img-terre {
-    max-width: 80%;
-    max-height: 80%;
+    position: relative;
+    z-index: 3;
+    width: 25vw; /* Définissez la largeur de la div */
+    height: auto;
+}
+
+
+.cercle {
+    position: absolute;
+    width: 21.5vw; /* Définissez la largeur de la div */
+    height: 21.5vw; /* Définissez la hauteur de la div */
+    background-color: #3498db; /* Couleur de fond, remplacez-la par la couleur souhaitée */
+    border-radius: 50%; /* Arrondir les coins à 50% pour créer un cercle */
     z-index: 2;
 }
 
-.titleHeader{
-    color : #d8ddbd;
+
+.titleHeader {
+    color: #d8ddbd;
     font-size: 5vh;
 }
 
@@ -82,16 +93,14 @@ body {
 
 .time-bar-inside {
     height: 3vh;
-    width: 70vw;
-    background-color: rgb(100, 60, 67,0.7);
-    animation: progressAnimation 300s linear forwards;
+    background-color: rgb(100, 60, 67, 0.7);
 }
 
 .flex-verti-2 {
     /*box-sizing: border-box;*/
     /*display: flex;*/
     flex-direction: column;
-    background-color: #000467;
+    background-color: #ffffff4d;
     height: 100vh;
     width: 20vw;
     /*justify-content: flex-start;*/
@@ -104,22 +113,28 @@ body {
     box-sizing: border-box;
     height: 15vh;
     width: 20vw;
-    background-color: cadetblue;
+    /*background-color: cadetblue;*/
     /*margin: 1vh;*/
-    border: solid black 2px;
+    /*border: solid black 2px;*/
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .carte-button {
+    margin: auto;
     display: flex;
     flex-direction: row;
     height: 15vh;
-    width: 20vw;
+    width: 15vw;
     border: none;
     padding: 0;
     background-color: white;
+    opacity: 70%;
+
+    border-radius: 2vh;
 }
 
-.carte-button:hover{
+.carte-button:hover {
     background-color: darkseagreen;
 }
 
@@ -132,7 +147,7 @@ body {
     height: 15vh;
     width: 12vw;
     /*background-color: white;*/
-    border: black solid 1px;
+    /*border: black solid 1px;*/
 }
 
 .carte-button-image-left:hover {
@@ -140,7 +155,7 @@ body {
 }
 
 
-.carte-button-text-left{
+.carte-button-text-left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +163,10 @@ body {
     box-sizing: border-box;
     height: 15vh;
     width: 12vw;
+}
 
+.carte-button-text-left:hover {
+    cursor: pointer;
 }
 
 .carte-img {
@@ -165,7 +183,7 @@ body {
     height: 15vh;
     width: 8vw;
     /*background-color: white;*/
-    border: black solid 1px;
+    border-left: black solid 2px;
 }
 
 .carte-button-image-right:hover {
@@ -186,44 +204,39 @@ body {
     width: 50%;
 }
 
-.argent-left{
+.argent-left {
     max-width: 100%;
     max-height: 100%;
+    /*filter: invert(100%);*/
 }
 
-@keyframes progressAnimation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-.dates{
+.dates {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     margin-top: -3vh;
 }
 
-.date{
+.date {
     display: flex;
     margin-top: 4px;
     font-weight: bold;
     border-radius: 5%;
 }
 
-#first_date{
-    width: 25%;
+#first_date {
+    width: 12%;
 }
-#second_date{
+
+#second_date {
     width: 100%;
 }
-#third_date{
+
+#third_date {
     width: 100%;
 
 }
-#fourth_date{
+
+#fourth_date {
     width: 10%;
 }

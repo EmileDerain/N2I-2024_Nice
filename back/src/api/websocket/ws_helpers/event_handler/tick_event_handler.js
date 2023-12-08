@@ -7,7 +7,7 @@ export function onTickEvent(user) {
     const scores = {
         money: game.money,
         total_money: game.total_money,
-        temperature: game.temperature,
+        temperature: game.temperature.toFixed(2),
         year: calculate_current_game_year(game),
     }
     sendScoreEvent(user, scores);

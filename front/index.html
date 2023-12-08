@@ -5,6 +5,7 @@
     <title>Page avec style.scss</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="earthAnim.css">
+    <link rel="stylesheet" href="space.css">
 
 </head>
 <body>
@@ -14,22 +15,23 @@
         <div class="flex-horiz">
             <div class="topHeader">
                 <div class="petit">
-                    <div class="titleHeader" id="globalMoney"> 10M </div>
+                    <div class="titleHeader" id="globalMoney"> </div>
                     <img src="ressources/dollar.png" class="argent-left" style="height:7vh">
                 </div>
                 <div class="petit">
-                    <div class="titleHeader" id="globalTemperature">10</div>
+                    <div class="titleHeader" id="globalTemperature"></div>
                     <img src="ressources/termo.png" class="argent-left" style="height:7vh">
                 </div>
             </div>
             <div class="flex-verti"></div>
         </div>
         <div class="gros">
-            <img src="ressources/terre_1.png" class="img-terre">
+            <img id="terre" src="ressources/terre_1.png" class="img-terre">
+            <div class="cercle" id="eau-terre5"></div>
         </div>
         <div class="time-bar">
             <div class="time-bar-outside">
-                <div class="time-bar-inside"></div>
+                <div class="time-bar-inside" id="progress-bar"></div>
                 <div class="dates">
                     <p class="date" id="first_date">1882</p>
                     <p class="date" id="second_date">1900</p>
@@ -100,6 +102,14 @@
     <div class="moon">
     </div>
 </div>
+</div>
+
+<div class="bg"></div>
+
+<div class="star-field">
+<div class="layer"></div>
+<div class="layer"></div>
+<div class="layer"></div>
 </div>
 
 </body>
