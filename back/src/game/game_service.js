@@ -45,7 +45,7 @@ export function onGameTick(game, user) {
         return game;
     }
     const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
-    game.money += total_generated_per_tick.money - game.population * 0.000002;
+    game.money += total_generated_per_tick.money - game.population * 0.00002;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
