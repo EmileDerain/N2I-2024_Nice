@@ -13,21 +13,21 @@ function onPageLoad() {
             const leaderboard = document.getElementById("leaderboard");
             
             data.forEach(user => {
-                const leaderboardItem = document.createElement('tr');
+                const leaderboardItem = document.createElement('div');
                 leaderboardItem.classList.add('leaderboard-item');
                 leaderboard.appendChild(leaderboardItem);
 
                 const usernameH2= document.createElement('h2');
-                thUsername.innerText = user.username;
-                leaderboard.appendChild(thUsername);
+                usernameH2.innerText = user.username;
+                leaderboardItem.appendChild(usernameH2);
 
-                const thMoney = document.createElement('h2');
-                thMoney.innerText = user.totalMoney;
-                leaderboard.appendChild(thMoney);
+                const thMoneyH2 = document.createElement('h2');
+                thMoneyH2.innerText = user.totalMoney;
+                leaderboardItem.appendChild(thMoneyH2);
 
-                const thTemperature= document.createElement('h2');
-                thTemperature.innerText = user.temperature;
-                leaderboard.appendChild(thTemperature);
+                const temperatureH2= document.createElement('h2');
+                temperatureH2.innerText = user.temperature;
+                leaderboardItem.appendChild(temperatureH2);
             });
         });
 }
