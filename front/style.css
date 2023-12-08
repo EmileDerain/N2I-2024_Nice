@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .flex-horiz {
@@ -7,6 +12,14 @@ body {
     flex-direction: row;
     background-color: #000467;
     justify-content: center;
+}
+
+.topHeader{
+    display: flex;
+    flex-direction: row;
+    background-color: #648d22;
+    justify-content: center;
+    border-radius: 0vh 0vh 3vh 3vh;
 }
 
 .flex-verti-1 {
@@ -30,12 +43,20 @@ body {
 .img-terre {
     max-width: 80%;
     max-height: 80%;
+    z-index: 2;
+}
+
+.titleHeader{
+    color : #d8ddbd;
+    font-size: 5vh;
 }
 
 .petit {
     height: 10vh;
     width: 20vw;
-    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*margin: 1vh;*/
 }
 
@@ -62,6 +83,10 @@ body {
 .time-bar-inside {
     height: 3vh;
     background-color: rgb(100, 60, 67,0.7);
+<<<<<<< HEAD
+=======
+    animation: progressAnimation 300s linear forwards;
+>>>>>>> 523b32ad313f37818daea106c261eb8073c0e4ba
 }
 
 .flex-verti-2 {
@@ -104,6 +129,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     height: 15vh;
     width: 12vw;
@@ -113,6 +139,18 @@ body {
 
 .carte-button-image-left:hover {
     cursor: pointer;
+}
+
+
+.carte-button-text-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 15vh;
+    width: 12vw;
+
 }
 
 .carte-img {
@@ -137,18 +175,22 @@ body {
 }
 
 .carte-button-image-right-argent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     height: 4vh;
     width: 100%;
 }
 
 .carte-button-image-right-argent-left {
-    height: 5vh;
+    height: 4vh;
     width: 50%;
 }
 
 .argent-left{
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .dates{

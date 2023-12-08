@@ -1,4 +1,4 @@
-import { userId } from "../websocket_client";
+import {socket, userId} from "../websocket_client.js";
 
 export function sendUpgrade(upgradeId) {
     sendMessage(10, { upgradeId });

@@ -2,17 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page avec style.css</title>
+    <title>Page avec style.scss</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="earthAnim.css">
+
 </head>
 <body>
 <script type="module" src="./index.js"></script>
 <div class="flex-horiz">
     <div class="flex-verti-1">
         <div class="flex-horiz">
-            <div class="flex-horiz">
-                <div class="petit"></div>
-                <div class="petit"></div>
+            <div class="topHeader">
+                <div class="petit">
+                    <div class="titleHeader" id="globalMoney"> 10M </div>
+                    <img src="ressources/dollar.png" class="argent-left" style="height:7vh">
+                </div>
+                <div class="petit">
+                    <div class="titleHeader" id="globalTemperature">10</div>
+                    <img src="ressources/termo.png" class="argent-left" style="height:7vh">
+                </div>
             </div>
             <div class="flex-verti"></div>
         </div>
@@ -34,23 +42,43 @@
     <div id="list-carte" class="flex-verti-2">
 <!--        <div class="carte">-->
 <!--            <button class="carte-button">-->
-<!--                <div class="carte-button-image-left">-->
-<!--                    <img src="ressources/elevage.png" class="carte-img">-->
+<!--&lt;!&ndash;                <div class="carte-button-image-left">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="ressources/elevage.png" class="carte-img">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <div class="carte-button-text-left">-->
+<!--                    <div class="carte-button-text-left-name">-->
+<!--                        Elevage-->
+<!--                    </div>-->
+<!--                    <div class="carte-button-text-left-price">-->
+<!--                        Prix : 34$-->
+<!--                    </div>-->
 <!--                </div>-->
+
 <!--                <div class="carte-button-image-right">-->
 <!--                    <div class="carte-button-image-right-argent">-->
 <!--                        <div class="carte-button-image-right-argent-left">-->
 <!--                            <img src="ressources/dollar.png" class="argent-left">-->
 <!--                        </div>-->
+<!--                        <div>-->
+<!--                            zer-->
+<!--                        </div>-->
 <!--                    </div>-->
+
 <!--                    <div class="carte-button-image-right-argent">-->
 <!--                        <div class="carte-button-image-right-argent-left">-->
 <!--                            <img src="ressources/temp.png" class="argent-left">-->
 <!--                        </div>-->
+<!--                        <div>-->
+<!--                            zer-->
+<!--                        </div>-->
 <!--                    </div>-->
+
 <!--                    <div class="carte-button-image-right-argent">-->
 <!--                        <div class="carte-button-image-right-argent-left">-->
 <!--                            <img src="ressources/compt.png" class="argent-left">-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            zer-->
 <!--                        </div>-->
 <!--                    </div>-->
 <!--                </div>-->
@@ -67,5 +95,12 @@
 <!--        <div class="carte"></div>-->
     </div>
 </div>
+
+<div class="wrapper">
+    <div class="moon">
+    </div>
+</div>
+</div>
+
 </body>
 </html>
