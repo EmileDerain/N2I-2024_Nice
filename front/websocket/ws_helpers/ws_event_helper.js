@@ -3,13 +3,15 @@ import { onScore } from "../../game/on_score.js";
 import { onUpgrade } from "../../game/on_upgrade.js";
 import { onUpgradeUnlock } from "../../game/on_upgrade_unlock.js";
 import { onConnectionEvent } from "./connection_event_handler.js";
+import {onEnd} from "../../game/on_end.js";
 
 const opEvents = [
     { "op": 0, "function": onError },
     { "op": 1, "function": onConnectionEvent },
     { "op": 2, "function": onScore},
     { "op": 3, "function": onUpgrade },
-    { "op": 4, "function": onUpgradeUnlock }
+    { "op": 4, "function": onEnd },
+    { "op": 5, "function": onUpgradeUnlock }
 ]
 
 export function onMessage(data) {
