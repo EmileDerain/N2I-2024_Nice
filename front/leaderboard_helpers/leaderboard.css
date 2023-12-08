@@ -32,3 +32,32 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+#leaderboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #242424; /* Couleur de fond pour le tableau */
+    color: #fff; /* Couleur du texte pour le tableau */
+  }
+  
+  .leaderboard-item {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+  
+  .leaderboard-item h2 {
+    text-align: center;
+    margin: 0;
+    background-color: #2f2f2f; /* Couleur de fond pour les cellules */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .leaderboard-item h2:first-child {
+    background-color: #333; /* Couleur de fond différente pour l'en-tête */
+    font-weight: bold;
+  }
+  
+  

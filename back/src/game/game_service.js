@@ -33,7 +33,7 @@ export function createGame() {
         start_year: 1882,
         end_year: 2100,
         current_tick: 0,
-        total_ticks: 2616,
+        total_ticks: 218,
         population: 0,
         upgrades: initUpgrades(1882),
         end_game: false,
@@ -45,7 +45,7 @@ export function onGameTick(game) {
         return game;
     }
     const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
-    game.money += total_generated_per_tick.money - game.population * 0.00001;
+    game.money += total_generated_per_tick.money - game.population * 0.000002;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
@@ -71,7 +71,7 @@ export function checkGameOver(game) {
 }
 
 export function calculate_current_game_year(game) {
-    return game.start_year + game.current_tick / 12;
+    return game.start_year + game.current_tick;
 }
 
 export function getEndGameStatus(game) {
