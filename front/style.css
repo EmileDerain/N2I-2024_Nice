@@ -16,6 +16,7 @@ body {
 .topHeader {
     display: flex;
     flex-direction: row;
+    z-index: 8;
     background-color: #648d22;
     justify-content: center;
     border-radius: 0vh 0vh 3vh 3vh;
@@ -67,6 +68,10 @@ body {
     flex-direction: column;
 }
 
+#notif-croix:hover{
+    cursor: pointer;
+}
+
 .notif-header{
     display: flex;
     flex-direction: row;
@@ -75,7 +80,7 @@ body {
     padding: 1vh;
 }
 
-.notif-text{
+#notif-text{
     padding: 2vh;
     text-align: justify;
 
@@ -93,8 +98,8 @@ body {
     padding-block: 0.5vh;
 }
 
-.hide{
-    display: none;
+.hide{  
+    display: none!important;
 }
 
 .titleHeader {
@@ -147,6 +152,7 @@ body {
     /*border: red solid;*/
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 9;
 }
 
 .carte {
