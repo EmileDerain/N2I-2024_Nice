@@ -3,7 +3,6 @@ import {sendScoreEvent} from "./score_event_handler.js";
 import {sendEndGameEvent} from "./end_game_event_handler.js";
 
 export function onTickEvent(user) {
-    console.log("Game tick event");
     const game = onGameTick(user.game);
     const scores = {
         money: game.money,
