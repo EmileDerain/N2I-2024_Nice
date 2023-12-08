@@ -9,7 +9,6 @@ export function onUpgradeEvent(user, d) {
         return;
     }
 
-    console.log("Upgrade event, upgradeId is " + upgradeId);
     const upgradeSuccess = onBuyUpgrade(user.game, upgradeId);
     sendConfirmUpgradeEvent(user, {
         upgradeId: upgradeId,
