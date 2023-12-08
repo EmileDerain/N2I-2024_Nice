@@ -82,9 +82,7 @@ body {
 
 .time-bar-inside {
     height: 3vh;
-    width: 70vw;
     background-color: rgb(100, 60, 67,0.7);
-    animation: progressAnimation 300s linear forwards;
 }
 
 .flex-verti-2 {
@@ -197,15 +195,6 @@ body {
     /*filter: invert(100%);*/
 }
 
-@keyframes progressAnimation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
 .dates{
     display: flex;
     flex-direction: row;
@@ -221,7 +210,7 @@ body {
 }
 
 #first_date{
-    width: 25%;
+    width: 12%;
 }
 #second_date{
     width: 100%;

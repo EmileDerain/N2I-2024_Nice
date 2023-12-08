@@ -1,10 +1,12 @@
-import {sendUpgrade} from "../websocket/ws_helpers/event_sender.js";
+export let tickInterval;
+import {sendUpgrade, sendTick} from "../websocket/ws_helpers/event_sender.js";
 
 export function onInit(game) {
     console.log("game", game);
     // document.getElementById("c1").innerText = game.upgrades[0].name;
 
     var newDivVert = document.getElementById("list-carte")
+    tickInterval = setInterval(sendTick, 1000)
 
     for (let i = 0; i < game.upgrades.length; i++) {
         var newDivGlobal = document.createElement("div");
