@@ -1,3 +1,5 @@
+import { updateBar } from "../index.js";
+
 export function onScore(scores) {
     console.log(scores);
     document.getElementById("globalMoney").innerText = traduceMoney(scores.money);
@@ -12,6 +14,7 @@ export function onScore(scores) {
     // Set the color
     var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
     document.getElementById("globalTemperature").style.color = color;
+    updateBar(scores.year);
 
 }
 

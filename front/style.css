@@ -80,10 +80,7 @@ body {
 
 .time-bar-inside {
     height: 3vh;
-    width: 70vw;
     background-color: rgb(100, 60, 67,0.7);
-
-    animation: progressAnimation 300s linear forwards;
 }
 
 .flex-verti-2 {
@@ -103,9 +100,11 @@ body {
     box-sizing: border-box;
     height: 15vh;
     width: 20vw;
-    background-color: cadetblue;
+    /*background-color: cadetblue;*/
     /*margin: 1vh;*/
-    border: solid black 2px;
+    /*border: solid black 2px;*/
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .carte-button {
@@ -116,6 +115,9 @@ body {
     border: none;
     padding: 0;
     background-color: white;
+    opacity: 70%;
+
+    border-radius: 2vh;
 }
 
 .carte-button:hover{
@@ -126,15 +128,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     height: 15vh;
     width: 12vw;
     /*background-color: white;*/
-    border: black solid 1px;
+    /*border: black solid 1px;*/
 }
 
 .carte-button-image-left:hover {
     cursor: pointer;
+}
+
+
+.carte-button-text-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 15vh;
+    width: 12vw;
+
 }
 
 .carte-img {
@@ -151,7 +166,7 @@ body {
     height: 15vh;
     width: 8vw;
     /*background-color: white;*/
-    border: black solid 1px;
+    border-left: black solid 2px;
 }
 
 .carte-button-image-right:hover {
@@ -159,27 +174,23 @@ body {
 }
 
 .carte-button-image-right-argent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     height: 4vh;
     width: 100%;
 }
 
 .carte-button-image-right-argent-left {
-    height: 5vh;
+    height: 4vh;
     width: 50%;
 }
 
 .argent-left{
-    max-width: 80%;
-    max-height: 80%;
-}
-
-@keyframes progressAnimation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
+    max-width: 100%;
+    max-height: 100%;
+    /*filter: invert(100%);*/
 }
 
 .dates{
@@ -197,7 +208,7 @@ body {
 }
 
 #first_date{
-    width: 25%;
+    width: 12%;
 }
 #second_date{
     width: 100%;
