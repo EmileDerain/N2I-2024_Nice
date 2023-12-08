@@ -40,8 +40,6 @@ export function onInit(game) {
 
 
 
-
-
         var newDiv02 = document.createElement("div");
         var newDiv03 = document.createElement("div");
         var newDiv04 = document.createElement("div");
@@ -52,6 +50,8 @@ export function onInit(game) {
 
         newDiv03.innerText = game.upgrades[i].name
         newDiv04.innerText = "Prix : " + game.upgrades[i].cost
+        newDiv04.id = "prix_id_" + game.upgrades[i].id
+
 
         newDiv02.appendChild(newDiv03)
         newDiv02.appendChild(newDiv04)
@@ -99,6 +99,8 @@ export function onInit(game) {
         newImage21.classList.add("argent-left")
 
         newDiv24.innerText = game.upgrades[i].temperature_generated
+        newDiv24.id = "temperature_generated_id_" + game.upgrades[i].id
+
 
         newDiv23.appendChild(newImage21)
 
