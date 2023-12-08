@@ -10,7 +10,6 @@ body {
 .flex-horiz {
     display: flex;
     flex-direction: row;
-    background-color: #000467;
     justify-content: center;
 }
 
@@ -25,7 +24,6 @@ body {
 .flex-verti-1 {
     display: flex;
     flex-direction: column;
-    background-color: #000467;
     justify-content: flex-start;
 }
 
