@@ -26,10 +26,13 @@ export function updateBar(Year) {
 function updatePlanet(year){
     if(year == 2000){
         document.getElementById("terre").src = "ressources/terre_2.png"
-        launchNotif()
+        let text = "Bienvenue dans la nouvelle ère industrielle, où l'homme amorce une ère de prospérité financière grâce au capitalisme effréné. Cependant, ce progrès économique s'accompagne malheureusement du début de problèmes environnementaux, symbolisés par l'émergence de la pollution. Alors que les gains financiers abondent, il devient impératif de trouver un équilibre entre la croissance économique et la préservation de notre environnement pour assurer un avenir durable. Nous entrons dans une période cruciale où les choix que nous faisons aujourd'hui auront un impact significatif sur le monde de demain."
+        notifCreator("Nouvelle ère", text)
     }
     else if(year == 2100){
         document.getElementById("terre").src = "ressources/terre_3.png"
+        let text = "Bienvenue dans la nouvelle ère, l'ère cyberpunk, où les excès de l'exploitation des ressources naturelles ont atteint des niveaux critiques. Face à cette situation dangereuse, le temps est venu de prendre des décisions cruciales pour sauver notre planète. Les choix que nous faisons aujourd'hui détermineront le sort de notre avenir. Engagez-vous dans des actions significatives et responsables pour restaurer l'équilibre entre la technologie et la nature, et façonnez un avenir durable dans cette ère où la survie de la planète dépend de vos choix. La quête pour préserver notre monde commence maintenant. À vous de jouer !"
+        notifCreator("Nouvelle ère", text)
     }
 }
 
