@@ -15,9 +15,9 @@ export function onInit(game) {
         var newButtonGlobal = document.createElement("button")
         newButtonGlobal.classList.add("carte-button")
 
-        newButtonGlobal.addEventListener('click', function() {
+        newButtonGlobal.addEventListener('click', function () {
             console.log("game.upgrades[i].id", game.upgrades[i].id),
-            sendUpgrade(game.upgrades[i].id)
+                sendUpgrade(game.upgrades[i].id)
         });
 
 
@@ -121,7 +121,8 @@ export function onInit(game) {
 
         newDivGlobal.appendChild(newButtonGlobal)
 
-        newDivGlobal.style.display = "none"
+        if (!game.upgrades[i].isUnlock)
+            newDivGlobal.style.display = "none"
 
         newDivVert.appendChild(newDivGlobal)
 
