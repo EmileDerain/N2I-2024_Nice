@@ -8,7 +8,7 @@ export function setUserId(id){
 
 export let socket;
 export function startWebSocket() {
-    socket = new WebSocket("ws://localhost:3007");
+    socket = new WebSocket("ws://puissancecraft.connect4.academy:3007");
 
     socket.addEventListener("open", (event) => console.log("WebSocket connected!"));
     socket.addEventListener("message", (event) => onMessage(event.data));
