@@ -62,7 +62,7 @@ body {
 .time-bar-inside {
     height: 3vh;
     width: 70vw;
-    background-color: rgb(100, 60, 67,0.5);
+    background-color: rgb(100, 60, 67,0.7);
     
     animation: progressAnimation 300s linear forwards;
 }
@@ -140,7 +140,7 @@ body {
 }
 
 .carte-button-image-right-argent {
-    height: 5vh;
+    height: 4vh;
     width: 100%;
 }
 
@@ -150,8 +150,8 @@ body {
 }
 
 .argent-left{
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 @keyframes progressAnimation {
@@ -163,15 +163,30 @@ body {
     }
 }
 
-.progress-part {
-    flex: 1;
-    height: 100%;
-    width: 33%;
-    background-color: #3498db;
-    border-right: 2px solid #fff; /* Ligne de séparation entre les parties */
+.dates{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    margin-top: -3vh;
 }
 
-/* Supprimer la bordure droite de la dernière partie */
-.progress-part:last-child {
-    border-right: none;
+.date{
+    display: flex;
+    margin-top: 4px;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+#first_date{
+    width: 25%;
+}
+#second_date{
+    width: 100%;
+}
+#third_date{
+    width: 100%;
+
+}
+#fourth_date{
+    width: 10%;
 }
