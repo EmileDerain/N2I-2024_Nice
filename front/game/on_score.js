@@ -1,7 +1,7 @@
 import { updateBar } from "../index.js";
 
 export function onScore(scores) {
-    console.log(scores);
+    // console.log(scores);
     setHeader(scores.money, scores.temperature);
     updateBar(scores.year);
 
@@ -30,6 +30,9 @@ export function traduceMoney(money) {
         moneyTraduced = (money / 1000000).toFixed(2) + "M";
     } else if (money >= 1000) {
         moneyTraduced = (money / 1000).toFixed(2) + "K";
+    }
+    else{
+        moneyTraduced = money.toFixed(2);
     }
     return moneyTraduced;
 }

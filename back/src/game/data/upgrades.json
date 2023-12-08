@@ -2,27 +2,27 @@
   {
     "id": 1,
     "name": "Elevage",
-    "cost": 100,
-    "money_generated": 10,
-    "temperature_generated": 0.001,
+    "cost": 150,
+    "money_generated": 8,
+    "temperature_generated": 0.00001,
     "unlock_year": 1882,
     "image_path": "elevage.png"
   },
   {
     "id": 2,
     "name": "Pêche",
-    "cost": 120,
-    "money_generated": 12,
-    "temperature_generated": 0.002,
+    "cost": 300,
+    "money_generated": 18,
+    "temperature_generated": 0.00001,
     "unlock_year": 1882,
     "image_path": "peche.png"
   },
   {
     "id": 3,
     "name": "Agriculture",
-    "cost": 150,
-    "money_generated": 15,
-    "temperature_generated": 0.003,
+    "cost": 100,
+    "money_generated": 5,
+    "temperature_generated": 0.00001,
     "unlock_year": 1882,
     "image_path": "agriculture.png"
   },
@@ -31,7 +31,7 @@
     "name": "Central Charbon",
     "cost": 200,
     "money_generated": 20,
-    "temperature_generated": 0.005,
+    "temperature_generated": 0.00005,
     "unlock_year": 1882,
     "image_path": "central_charbon.png"
   },
@@ -40,7 +40,7 @@
     "name": "Central Nucleaire",
     "cost": 400,
     "money_generated": 40,
-    "temperature_generated": 0.01,
+    "temperature_generated": 0.0001,
     "unlock_year": 1963,
     "image_path": "central_nucleaire.png"
   },
@@ -49,7 +49,7 @@
     "name": "Chariotte à cheval",
     "cost": 300,
     "money_generated": 35,
-    "temperature_generated": 0.008,
+    "temperature_generated": 0.00008,
     "unlock_year": 1882,
     "image_path": "chariotte_cheval.png"
   },
@@ -58,7 +58,7 @@
     "name": "Voiture",
     "cost": 150,
     "money_generated": 15,
-    "temperature_generated": 0.005,
+    "temperature_generated": 0.00005,
     "unlock_year": 1890,
     "image_path": "voiture.png"
   },
@@ -67,7 +67,7 @@
     "name": "Train",
     "cost": 200,
     "money_generated": 25,
-    "temperature_generated": 0.007,
+    "temperature_generated": 0.00007,
     "unlock_year": 1890,
     "image_path": "train.png"
   },
@@ -76,7 +76,7 @@
     "name": "Avion",
     "cost": 400,
     "money_generated": 50,
-    "temperature_generated": 0.015,
+    "temperature_generated": 0.00015,
     "unlock_year": 1909,
     "image_path": "avion.png"
   },
@@ -85,7 +85,7 @@
     "name": "Barrage",
     "cost": 500,
     "money_generated": 60,
-    "temperature_generated": 0.02,
+    "temperature_generated": 0.0002,
     "unlock_year": 1928,
     "image_path": "barrage.png"
   },
@@ -94,7 +94,7 @@
     "name": "2 Chevaux",
     "cost": 600,
     "money_generated": 70,
-    "temperature_generated": 0.025,
+    "temperature_generated": 0.00025,
     "unlock_year": 1948,
     "image_path": "2_chevaux.png"
   },
@@ -103,7 +103,7 @@
     "name": "Vol commercial",
     "cost": 800,
     "money_generated": 80,
-    "temperature_generated": 0.03,
+    "temperature_generated": 0.0003,
     "unlock_year": 1950,
     "image_path": "vol_commercial.png"
   },
@@ -112,7 +112,7 @@
     "name": "Elevage intensif",
     "cost": 1000,
     "money_generated": 90,
-    "temperature_generated": 0.035,
+    "temperature_generated": 0.00035,
     "unlock_year": 1970,
     "image_path": "elevage_intensif.png"
   },
@@ -121,7 +121,7 @@
     "name": "Pêche intensive",
     "cost": 1200,
     "money_generated": 100,
-    "temperature_generated": 0.04,
+    "temperature_generated": 0.0004,
     "unlock_year": 1970,
     "image_path": "peche_intensive.png"
   },
@@ -130,7 +130,7 @@
     "name": "Porte conteneur",
     "cost": 1500,
     "money_generated": 110,
-    "temperature_generated": 0.045,
+    "temperature_generated": 0.00045,
     "unlock_year": 1970,
     "image_path": "porte_conteneur.png"
   },
@@ -139,7 +139,7 @@
     "name": "SUV",
     "cost": 2000,
     "money_generated": 120,
-    "temperature_generated": 0.05,
+    "temperature_generated": 0.0005,
     "unlock_year": 1997,
     "image_path": "suv.png"
   },
@@ -148,7 +148,7 @@
     "name": "Voiture électrique",
     "cost": 2500,
     "money_generated": 130,
-    "temperature_generated": 0.055,
+    "temperature_generated": 0.00055,
     "unlock_year": 2012,
     "image_path": "voiture_electrique.png"
   },
@@ -157,7 +157,7 @@
     "name": "Agriculture bio",
     "cost": 5000,
     "money_generated": 150,
-    "temperature_generated": 0.0001,
+    "temperature_generated": 0.000001,
     "unlock_year": 2000,
     "image_path": "agriculture_bio.png"
   }
