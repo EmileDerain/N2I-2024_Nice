@@ -1,4 +1,4 @@
-import { initGame } from "../../game/game_facade.js";
+import { onInit } from "../../game/on_init.js";
 import { setUserId } from "../../game/state.js";
 
 export function onConnectionEvent(d) {
@@ -16,5 +16,5 @@ export function onConnectionEvent(d) {
     }
 
     setUserId(userId);
-    initGame(game);
+    onInit(game);
 }
