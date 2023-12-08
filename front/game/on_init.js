@@ -11,17 +11,32 @@ export function onInit(game) {
         var newButtonGlobal = document.createElement("button")
         newButtonGlobal.classList.add("carte-button")
 
-        var newDivIma1 = document.createElement("div");
-        var newImageIma1 = document.createElement("img")
+        // var newDivIma1 = document.createElement("div");
+        // var newImageIma1 = document.createElement("img")
+        //
+        // newDivIma1.classList.add("carte-button-image-left")
+        //
+        // newImageIma1.src = "ressources/" + game.upgrades[i].path
+        // newImageIma1.classList.add("carte-button-image-left")
+        //
+        // newDivIma1.appendChild(newImageIma1)
+        // newButtonGlobal.appendChild(newDivIma1)
 
-        newDivIma1.classList.add("carte-button-image-left")
+        var newDiv02 = document.createElement("div");
+        var newDiv03 = document.createElement("div");
+        var newDiv04 = document.createElement("div");
 
-        newImageIma1.src = game.upgrades[i].image_path
-        // console.log("game.upgrades[i].image_path", game.upgrades[i])
-        newImageIma1.classList.add("carte-button-image-left")
+        newDiv02.classList.add("carte-button-text-left");
+        newDiv03.classList.add("carte-button-text-left-name");
+        newDiv04.classList.add("carte-button-text-left-price");
 
-        newDivIma1.appendChild(newImageIma1)
-        newButtonGlobal.appendChild(newDivIma1)
+        newDiv03.innerText = game.upgrades[i].name
+        newDiv04.innerText = "prix : " + game.upgrades[i].cost
+
+        newDiv02.appendChild(newDiv03)
+        newDiv02.appendChild(newDiv04)
+
+        newButtonGlobal.appendChild(newDiv02)
 
         var newDivGlobBis = document.createElement("div");
         newDivGlobBis.classList.add("carte-button-image-right");
@@ -29,6 +44,7 @@ export function onInit(game) {
 
         var newDiv12 = document.createElement("div");
         var newDiv13 = document.createElement("div");
+        var newDiv14 = document.createElement("div");
 
         var newImage11 = document.createElement("img")
 
@@ -38,14 +54,19 @@ export function onInit(game) {
         newImage11.src = "ressources/dollar.png"
         newImage11.classList.add("argent-left")
 
+        newDiv14.innerText = game.upgrades[i].money_generated
+
         newDiv13.appendChild(newImage11)
+
         newDiv12.appendChild(newDiv13)
+        newDiv12.appendChild(newDiv14)
 
         newDivGlobBis.appendChild(newDiv12)
 
 
         var newDiv22 = document.createElement("div");
         var newDiv23 = document.createElement("div");
+        var newDiv24 = document.createElement("div");
 
         var newImage21 = document.createElement("img")
 
@@ -55,13 +76,18 @@ export function onInit(game) {
         newImage21.src = "ressources/temp.png"
         newImage21.classList.add("argent-left")
 
+        newDiv24.innerText = game.upgrades[i].temperature_generated
+
         newDiv23.appendChild(newImage21)
+
         newDiv22.appendChild(newDiv23)
+        newDiv22.appendChild(newDiv24)
 
         newDivGlobBis.appendChild(newDiv22)
 
         var newDiv32 = document.createElement("div");
         var newDiv33 = document.createElement("div");
+        var newDiv34 = document.createElement("div");
 
         var newImage31 = document.createElement("img")
 
@@ -71,8 +97,12 @@ export function onInit(game) {
         newImage31.src = "ressources/compt.png"
         newImage31.classList.add("argent-left")
 
+        newDiv34.innerText = 0
+
         newDiv33.appendChild(newImage31)
+
         newDiv32.appendChild(newDiv33)
+        newDiv32.appendChild(newDiv34)
 
         newDivGlobBis.appendChild(newDiv32)
 
@@ -81,5 +111,7 @@ export function onInit(game) {
         newDivGlobal.appendChild(newButtonGlobal)
 
         newDivVert.appendChild(newDivGlobal)
+
+
     }
 }
