@@ -119,6 +119,8 @@ export function onInit(game) {
 
         newDivGlobal.appendChild(newButtonGlobal)
 
+        newDivGlobal.style.display = "none"
+
         newDivVert.appendChild(newDivGlobal)
 
 
