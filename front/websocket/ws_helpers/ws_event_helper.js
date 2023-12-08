@@ -3,7 +3,7 @@ import { onScore } from "../../game/on_score.js";
 import { onUpgrade } from "../../game/on_upgrade.js";
 import { onUpgradeUnlock } from "../../game/on_upgrade_unlock.js";
 import { onConnectionEvent } from "./connection_event_handler.js";
-import {onEnd} from "../../game/on_end";
+import {onEnd} from "../../game/on_end.js";
 
 const opEvents = [
     { "op": 0, "function": onError },
