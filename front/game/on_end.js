@@ -1,4 +1,4 @@
-import { tickInterval } from "./on_init";
+import { tickInterval } from "./on_init.js";
 import { notifCreator } from "./index.js";
 
 
