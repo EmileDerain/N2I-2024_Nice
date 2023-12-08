@@ -7,6 +7,7 @@
 | 2 | Score event | money, totalMoney, temperature, year |
 | 3 | Confirm upgrade event | upgradeId, count |
 | 4 | Game end event | type |
+| 5 | Upgrade unlock event | upgradeId |
 
 ## Client code
 Client code needs an 'userId' parameter.
@@ -85,7 +86,7 @@ Event sent when the server update the score.
 ### Confirm Upgrade Event
 Event sent when the client iterate to the next tick.
 
-#### Example of Tick Event
+#### Example of Confirm Upgrade Event
 ```
 {
   "op": 3,
@@ -115,14 +116,16 @@ Event sent when the client iterate to the next tick.
 | 1 | Lose T° | 
 | 1 | Win | 
 
-### Tick Event
-Event sent when the client iterate to the next tick.
+### Upgrade Unlock Event
+Event sent when the player unlock a new upgrade.
 
 #### Example of Tick Event
 ```
 {
-  "op": 11,
-  "userId": 101112
+  "op": 5,
+  "d": {
+    "upgradeId": 4
+  }
 }
 ```
 
