@@ -1,5 +1,14 @@
 [
   {
+    "id": 6,
+    "name": "Chariotte à cheval",
+    "cost": 300,
+    "money_generated": 35,
+    "temperature_generated": 0.00008,
+    "unlock_year": 1882,
+    "image_path": "chariotte_cheval.png"
+  },
+  {
     "id": 1,
     "name": "Elevage",
     "cost": 150,
@@ -43,15 +52,6 @@
     "temperature_generated": 0.0001,
     "unlock_year": 1963,
     "image_path": "central_nucleaire.png"
-  },
-  {
-    "id": 6,
-    "name": "Chariotte à cheval",
-    "cost": 300,
-    "money_generated": 35,
-    "temperature_generated": 0.00008,
-    "unlock_year": 1882,
-    "image_path": "chariotte_cheval.png"
   },
   {
     "id": 7,

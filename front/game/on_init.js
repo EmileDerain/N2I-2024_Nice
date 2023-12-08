@@ -23,16 +23,24 @@ export function onInit(game) {
         });
 
 
-        // var newDivIma1 = document.createElement("div");
-        // var newImageIma1 = document.createElement("img")
-        //
-        // newDivIma1.classList.add("carte-button-image-left")
-        //
-        // newImageIma1.src = "ressources/" + game.upgrades[i].path
-        // newImageIma1.classList.add("carte-button-image-left")
-        //
-        // newDivIma1.appendChild(newImageIma1)
-        // newButtonGlobal.appendChild(newDivIma1)
+
+        var newDivTotIma1 = document.createElement("div");
+        var newDivIma1 = document.createElement("div");
+        var newImageIma1 = document.createElement("img")
+
+        newDivTotIma1.classList.add("carte-button_colum")
+        newDivIma1.classList.add("carte-button-image-left")
+
+        newImageIma1.src = "ressources/" + game.upgrades[i].path
+        newImageIma1.classList.add("carte-img")
+
+        newDivIma1.appendChild(newImageIma1)
+
+        newDivTotIma1.appendChild(newDivIma1)
+
+
+
+
 
         var newDiv02 = document.createElement("div");
         var newDiv03 = document.createElement("div");
@@ -43,12 +51,14 @@ export function onInit(game) {
         newDiv04.classList.add("carte-button-text-left-price");
 
         newDiv03.innerText = game.upgrades[i].name
-        newDiv04.innerText = "prix : " + game.upgrades[i].cost
+        newDiv04.innerText = "Prix : " + game.upgrades[i].cost
 
         newDiv02.appendChild(newDiv03)
         newDiv02.appendChild(newDiv04)
 
-        newButtonGlobal.appendChild(newDiv02)
+        newDivTotIma1.appendChild(newDiv02)
+
+        newButtonGlobal.appendChild(newDivTotIma1)
 
         var newDivGlobBis = document.createElement("div");
         newDivGlobBis.classList.add("carte-button-image-right");
@@ -123,8 +133,8 @@ export function onInit(game) {
 
         newDivGlobal.appendChild(newButtonGlobal)
 
-        if (!game.upgrades[i].isUnlock)
-            newDivGlobal.style.display = "none"
+        // if (!game.upgrades[i].isUnlock)
+        //     newDivGlobal.style.display = "none"
 
         newDivVert.appendChild(newDivGlobal)
 
