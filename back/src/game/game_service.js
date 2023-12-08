@@ -35,7 +35,7 @@ export function createGame() {
 }
 
 export function onGameTick(game) {
-    if (end_game) {
+    if (game.end_game) {
         return game;
     }
     const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
