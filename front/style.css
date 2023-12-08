@@ -16,6 +16,7 @@ body {
 .topHeader {
     display: flex;
     flex-direction: row;
+    z-index: 8;
     background-color: #648d22;
     justify-content: center;
     border-radius: 0vh 0vh 3vh 3vh;
@@ -56,6 +57,46 @@ body {
     z-index: 2;
 }
 
+#notif{
+    position: absolute;
+    width: 40vw; /* Définissez la largeur de la div */
+    height: auto; /* Définissez la hauteur de la div */
+    background-color: #ffffffe1; /* Couleur de fond, remplacez-la par la couleur souhaitée */
+    z-index: 10;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notif-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #c4c4c4e1; /* Couleur de fond, remplacez-la par la couleur souhaitée */
+    padding: 1vh;
+}
+
+.notif-text{
+    padding: 2vh;
+    text-align: justify;
+
+}
+
+#notif-titre{
+    display: flex;
+    align-items: center;
+}
+
+#notif-croix{
+    background-color: rgb(185, 9, 9);
+    color: white;
+    padding-inline: 1vh;
+    padding-block: 0.5vh;
+}
+
+.hide{
+    display: none;
+}
 
 .titleHeader {
     color: #d8ddbd;
@@ -107,6 +148,7 @@ body {
     /*border: red solid;*/
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 9;
 }
 
 .carte {

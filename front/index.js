@@ -1,6 +1,11 @@
 import { startWebSocket } from "./websocket/websocket_client.js";
 
-window.addEventListener('load', startWebSocket);
+window.addEventListener('load', init);
+
+function init(){
+    startWebSocket()
+    notifManagement()
+}
 
 document.addEventListener('keydown', function(event) {
     console.log("event", event.key);
@@ -18,9 +23,15 @@ export function updateBar(Year) {
 function updatePlanet(year){
     if(year == 2000){
         document.getElementById("terre").src = "ressources/terre_2.png"
+        launchNotif()
     }
     else if(year == 2100){
         document.getElementById("terre").src = "ressources/terre_3.png"
     }
+}
+
+function notifManagement(){
+    let croix = document.getElementById("notif-croix");
+    croix.addEventListener("click", ()=>{croix.classList.add("hide")})
 }
 
