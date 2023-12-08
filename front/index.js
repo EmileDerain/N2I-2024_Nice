@@ -1,3 +1,3 @@
 import { startWebSocket } from "./websocket/websocket_client.js";
 
-window.addEventListener('load', startWebSocket());
+window.addEventListener('load', startWebSocket);
