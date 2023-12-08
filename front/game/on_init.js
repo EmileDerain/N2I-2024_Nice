@@ -1,6 +1,6 @@
 export let tickInterval;
 import {sendUpgrade, sendTick} from "../websocket/ws_helpers/event_sender.js";
-
+import {onScore, setHeader} from "./on_score.js";
 export function onInit(game) {
     console.log("game", game);
     // document.getElementById("c1").innerText = game.upgrades[0].name;
@@ -15,9 +15,9 @@ export function onInit(game) {
         var newButtonGlobal = document.createElement("button")
         newButtonGlobal.classList.add("carte-button")
 
-        newButtonGlobal.addEventListener('click', function() {
+        newButtonGlobal.addEventListener('click', function () {
             console.log("game.upgrades[i].id", game.upgrades[i].id),
-            sendUpgrade(game.upgrades[i].id)
+                sendUpgrade(game.upgrades[i].id)
         });
 
 
@@ -121,10 +121,11 @@ export function onInit(game) {
 
         newDivGlobal.appendChild(newButtonGlobal)
 
-        newDivGlobal.style.display = "none"
+        if (!game.upgrades[i].isUnlock)
+            newDivGlobal.style.display = "none"
 
         newDivVert.appendChild(newDivGlobal)
 
-
+        setHeader(game.money,game.temperature)
     }
 }

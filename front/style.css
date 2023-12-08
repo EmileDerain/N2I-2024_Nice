@@ -13,7 +13,7 @@ body {
     justify-content: center;
 }
 
-.topHeader{
+.topHeader {
     display: flex;
     flex-direction: row;
     background-color: #648d22;
@@ -57,8 +57,8 @@ body {
 }
   
 
-.titleHeader{
-    color : #d8ddbd;
+.titleHeader {
+    color: #d8ddbd;
     font-size: 5vh;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .time-bar-inside {
     height: 3vh;
-    background-color: rgb(100, 60, 67,0.7);
+    background-color: rgb(100, 60, 67, 0.7);
 }
 
 .flex-verti-2 {
@@ -133,7 +133,7 @@ body {
     border-radius: 2vh;
 }
 
-.carte-button:hover{
+.carte-button:hover {
     background-color: darkseagreen;
 }
 
@@ -154,7 +154,7 @@ body {
 }
 
 
-.carte-button-text-left{
+.carte-button-text-left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +162,10 @@ body {
     box-sizing: border-box;
     height: 15vh;
     width: 12vw;
+}
 
+.carte-button-text-left:hover {
+    cursor: pointer;
 }
 
 .carte-img {
@@ -200,36 +203,39 @@ body {
     width: 50%;
 }
 
-.argent-left{
+.argent-left {
     max-width: 100%;
     max-height: 100%;
     /*filter: invert(100%);*/
 }
 
-.dates{
+.dates {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     margin-top: -3vh;
 }
 
-.date{
+.date {
     display: flex;
     margin-top: 4px;
     font-weight: bold;
     border-radius: 5%;
 }
 
-#first_date{
+#first_date {
     width: 12%;
 }
-#second_date{
+
+#second_date {
     width: 100%;
 }
-#third_date{
+
+#third_date {
     width: 100%;
 
 }
-#fourth_date{
+
+#fourth_date {
     width: 10%;
 }
