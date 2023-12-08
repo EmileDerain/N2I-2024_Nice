@@ -1,7 +1,7 @@
 import upgrades_data from "./data/upgrades.json" assert {type: "json"};
 import {sendUpgradeUnlockEvent} from "../api/websocket/ws_helpers/event_handler/upgrade_unlock_event_handler.js";
 
-export function initUpgrades() {
+export function initUpgrades(startYear) {
     const upgrades = {};
     upgrades_data.forEach(upgrade_data => {
         upgrades[upgrade_data.id] = {
@@ -11,6 +11,7 @@ export function initUpgrades() {
             temperature_generated: upgrade_data.temperature_generated,
             unlock_year: upgrade_data.unlock_year,
             path: upgrade_data.image_path,
+            isUnlock: startYear >= upgrade_data.unlock_year,
             quantity: 0,
         }
     });
@@ -38,7 +39,6 @@ export function calculateTotalGeneratedPerTick(upgrades) {
 export function checkUpgradeUnlock(upgrades, current_year) {
     Object.values(upgrades).forEach(upgrade => {
         if (!upgrade.isUnlock && upgrade.unlock_year <= current_year) {
-            upgrade.isUnlock = true;
             sendUpgradeUnlockEvent(upgrade.id);
         }
     });

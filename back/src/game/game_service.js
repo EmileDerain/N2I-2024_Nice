@@ -8,7 +8,7 @@ export function initGame(ws) {
     const user = createUser(ws);
     const currentYear = calculate_current_game_year(user.game);
     const upgradesList = Object.entries(user.game.upgrades).map(([id, data]) => (
-        { id: parseInt(id), ...data, isUnlock: currentYear >= data.unlock_year }
+        { id: parseInt(id), ...data }
     ));
 
     const gameInfo = {
@@ -35,7 +35,7 @@ export function createGame() {
         current_tick: 0,
         total_ticks: 2616,
         population: 0,
-        upgrades: initUpgrades(),
+        upgrades: initUpgrades(1882),
         end_game: false,
     }
 }
