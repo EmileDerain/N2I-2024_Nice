@@ -10,24 +10,24 @@ function onPageLoad() {
         return response.json();
         })
         .then(data => {
-            const tbody = document.getElementById("tbody");
+            const leaderboard = document.getElementById("leaderboard");
             
             data.forEach(user => {
                 const leaderboardItem = document.createElement('tr');
                 leaderboardItem.classList.add('leaderboard-item');
-                tbody.appendChild(tr);
+                leaderboard.appendChild(leaderboardItem);
 
-                const thUsername = document.createElement('th');
+                const usernameH2= document.createElement('h2');
                 thUsername.innerText = user.username;
-                tr.appendChild(thUsername);
+                leaderboard.appendChild(thUsername);
 
-                const thMoney = document.createElement('th');
+                const thMoney = document.createElement('h2');
                 thMoney.innerText = user.totalMoney;
-                tr.appendChild(thMoney);
+                leaderboard.appendChild(thMoney);
 
-                const thTemperature= document.createElement('th');
+                const thTemperature= document.createElement('h2');
                 thTemperature.innerText = user.temperature;
-                tr.appendChild(thTemperature);
+                leaderboard.appendChild(thTemperature);
             });
         });
 }
