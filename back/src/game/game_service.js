@@ -1,5 +1,8 @@
 import {buyUpgrade, calculateTotalGeneratedPerTick, initUpgrades} from "./upgrade_service.js";
 import {createUser} from "../user_service.js";
+import {sendEndGameEvent} from "../api/websocket/ws_helpers/event_handler/end_game_event_handler.js";
+
+const maxTemperature = 5;
 
 export function initGame(ws) {
     const user = createUser(ws);
@@ -24,10 +27,10 @@ export function createGame() {
         money: 1000,
         total_money: 1000,
         temperature: 0,
-        start_year: 1900,
+        start_year: 1882,
         end_year: 2100,
         current_tick: 0,
-        total_ticks: 10400,
+        total_ticks: 2616,
         population: 1600000,
         upgrades: initUpgrades(),
         end_game: false,
@@ -39,7 +42,7 @@ export function onGameTick(game) {
         return game;
     }
     const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
-    game.money += total_generated_per_tick.money - game.population * 0.001;
+    game.money += total_generated_per_tick.money - game.population * 0.0001;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
@@ -58,19 +61,19 @@ export function onBuyUpgrade(game, upgrade_id) {
 }
 
 export function checkGameOver(game) {
-    const end_game = game.temperature < 1.5 && game.money > 0 && game.current_tick < game.total_ticks
+    const end_game = game.temperature >= maxTemperature || game.money < 0 || game.current_tick >= game.total_ticks;
     game.end_game = end_game;
     return end_game;
 }
 
 export function calculate_current_game_year(game) {
-    return game.start_year + Math.floor((game.current_tick / 4) / 12);
+    return game.start_year + Math.floor(game.current_tick / 12);
 }
 
 export function getEndGameStatus(game) {
     if (game.money < 0) {
         return 0;
-    } else if (game.temperature >= 1.5) {
+    } else if (game.temperature >= maxTemperature) {
         return 1;
     } else if (game.current_tick >= game.total_ticks) {
         return 2;
