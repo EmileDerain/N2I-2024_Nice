@@ -1,0 +1,29 @@
+.poule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+p {
+    margin: 10vh;
+    font-weight: bold;
+    font-size: x-large;
+    color: #ffffff;
+}
+
+.tourne {
+    animation: rotateAnimation 4s linear infinite; /* Rotation de l'image pendant 4 secondes en boucle */
+    width: 20%;
+    border-radius: 50%;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg); /* Pas de rotation initiale */
+    }
+    100% {
+        transform: rotate(360deg); /* Rotation complète (360 degrés) */
+    }
+}
