@@ -11,12 +11,13 @@ function init(){
 document.addEventListener('keydown', function(event) {
     console.log("event", event.key);
     if (event.key === ' ' || event.code === 'Space') {
-        document.location.href="./egg.html"; 
+        document.location.href="./egg.html";
     }
-});    
+});
 
 export function updateBar(Year) {
     let progress =  (Year - 1882) / (2100 - 1882) * 100;
+    // console.log("progress", progress);
     document.getElementById("progress-bar").style.width = `${progress}%`;
     updatePlanet(Year)
 }

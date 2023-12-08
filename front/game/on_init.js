@@ -1,16 +1,18 @@
 export let tickInterval;
 import {sendUpgrade, sendTick} from "../websocket/ws_helpers/event_sender.js";
 import {onScore, setHeader} from "./on_score.js";
+
 export function onInit(game) {
     console.log("game", game);
     // document.getElementById("c1").innerText = game.upgrades[0].name;
 
     var newDivVert = document.getElementById("list-carte")
-    tickInterval = setInterval(sendTick, 1000)
+    tickInterval = setInterval(sendTick, 100)
 
     for (let i = 0; i < game.upgrades.length; i++) {
         var newDivGlobal = document.createElement("div");
         newDivGlobal.classList.add("carte");
+        newDivGlobal.id = "carte_id_" + game.upgrades[i].id
 
         var newButtonGlobal = document.createElement("button")
         newButtonGlobal.classList.add("carte-button")
