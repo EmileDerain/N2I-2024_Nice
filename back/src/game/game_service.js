@@ -6,7 +6,10 @@ const maxTemperature = 5;
 
 export function initGame(ws) {
     const user = createUser(ws);
-    const upgradesList = Object.entries(user.game.upgrades).map(([id, data]) => ({ id: parseInt(id), ...data }));
+    const currentYear = calculate_current_game_year(user.game);
+    const upgradesList = Object.entries(user.game.upgrades).map(([id, data]) => (
+        { id: parseInt(id), ...data, isUnlock: currentYear >= data.unlock_year }
+    ));
 
     const gameInfo = {
         userId: user.id,
