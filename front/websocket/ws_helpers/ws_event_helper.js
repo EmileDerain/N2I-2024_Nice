@@ -1,7 +1,11 @@
-import { onConnectionEvent } from "./event_handler/connection_event_handler.js";
+import { onScore } from "../../game/on_score.js";
+import { onUpgrade } from "../../game/on_upgrade.js";
+import { onConnectionEvent } from "./connection_event_handler.js";
 
 const opEvents = [
-    { "op": 1, "function": onConnectionEvent }
+    { "op": 1, "function": onConnectionEvent },
+    { "op": 2, "function": onScore},
+    { "op": 3, "function": onUpgrade }
 ]
 
 export function onMessage(data) {

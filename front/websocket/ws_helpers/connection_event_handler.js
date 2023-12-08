@@ -1,5 +1,5 @@
-import { initGame } from "../../game/game_facade.js";
-import { setUserId } from "../../game/state.js";
+import { onInit } from "../../game/on_init.js";
+import { setUserId } from "../websocket_client.js";
 
 export function onConnectionEvent(d) {
     const userId = d.userId;
@@ -16,5 +16,5 @@ export function onConnectionEvent(d) {
     }
 
     setUserId(userId);
-    initGame(game);
+    onInit(game);
 }
