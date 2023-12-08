@@ -45,7 +45,7 @@ export function onGameTick(game) {
         return game;
     }
     const total_generated_per_tick = calculateTotalGeneratedPerTick(game.upgrades);
-    game.money += total_generated_per_tick.money - game.population * 0.0001;
+    game.money += total_generated_per_tick.money - game.population * 0.00001;
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
@@ -70,7 +70,7 @@ export function checkGameOver(game) {
 }
 
 export function calculate_current_game_year(game) {
-    return game.start_year + Math.floor(game.current_tick / 12);
+    return game.start_year + game.current_tick / 12;
 }
 
 export function getEndGameStatus(game) {
