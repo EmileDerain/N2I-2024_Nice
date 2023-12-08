@@ -5,6 +5,7 @@ export function initUpgrades(startYear) {
     const upgrades = {};
     upgrades_data.forEach(upgrade_data => {
         upgrades[upgrade_data.id] = {
+            id: upgrade_data.id,
             name: upgrade_data.name,
             cost: upgrade_data.cost,
             money_generated: upgrade_data.money_generated,
@@ -36,9 +37,10 @@ export function calculateTotalGeneratedPerTick(upgrades) {
     return total_generated;
 }
 
-export function checkUpgradeUnlock(upgrades, current_year) {
+export function checkUpgradeUnlock(upgrades, current_year, user) {
     Object.values(upgrades).forEach(upgrade => {
         if (!upgrade.isUnlock && upgrade.unlock_year <= current_year) {
+            upgrade.isUnlock = true;
             sendUpgradeUnlockEvent(user, upgrade.id);
         }
     });
