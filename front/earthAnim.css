@@ -116,7 +116,7 @@ body {
 
 @keyframes wrapper-move {
   0% {
-    z-index: 1;
+    z-index: 5;
   }
   50% {
     z-index: 5;
@@ -130,18 +130,29 @@ body {
   0% {
     left: 12%;
     top: 75%;
-    z-index: 1;
+    width: 100px;
+    height: 100px;
+  }
+  25%{
+    width: 125px;
+    height: 125px;
   }
   50% {
+    width: 100px;
+    height: 100px;
     left: 88%;
     top: 25%;
-    z-index: 1;
+  }
+  75%{
+    width: 75px;
+    height: 75px;
   }
   100% {
     left: 12%;
     top: 75%;
+    width: 100px;
+    height: 100px;
   }
 }
-
 
 
