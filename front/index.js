@@ -23,7 +23,7 @@ export function updateBar(Year) {
     updatePlanet(Year)
 }
 
-function updatePlanet(year){
+export function updatePlanet(year){
     if(year == 2000){
         document.getElementById("terre").src = "ressources/terre_2.png"
         let text = "Bienvenue dans la nouvelle ère industrielle, où l'homme amorce une ère de prospérité financière grâce au capitalisme effréné. Cependant, ce progrès économique s'accompagne malheureusement du début de problèmes environnementaux, symbolisés par l'émergence de la pollution. Alors que les gains financiers abondent, il devient impératif de trouver un équilibre entre la croissance économique et la préservation de notre environnement pour assurer un avenir durable. Nous entrons dans une période cruciale où les choix que nous faisons aujourd'hui auront un impact significatif sur le monde de demain."
@@ -42,7 +42,7 @@ function notifManagement(){
 }
 
 
-function notifCreator(titre, texte){
+export function notifCreator(titre, texte){
     document.getElementById("notif-titre").innerText=titre;
     document.getElementById("notif-text").innerText=texte;
     document.getElementById("notif").classList.remove("hide")
