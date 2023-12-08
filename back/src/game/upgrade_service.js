@@ -9,6 +9,7 @@ export function initUpgrades() {
             money_generated: upgrade_data.money_generated,
             temperature_generated: upgrade_data.temperature_generated,
             unlock_year: upgrade_data.unlock_year,
+            path: upgrade_data.image_path,
             quantity: 0,
         }
     });
