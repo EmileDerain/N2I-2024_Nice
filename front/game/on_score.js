@@ -1,7 +1,7 @@
 import { updateBar } from "../index.js";
 
 export function onScore(scores) {
-    console.log(scores);
+    // console.log(scores);
     setHeader(scores.money, scores.temperature);
     updateBar(scores.year);
 
