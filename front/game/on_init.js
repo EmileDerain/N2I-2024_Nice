@@ -1,6 +1,6 @@
 export let tickInterval;
 import {sendUpgrade, sendTick} from "../websocket/ws_helpers/event_sender.js";
-
+import {onScore, setHeader} from "./on_score.js";
 export function onInit(game) {
     console.log("game", game);
     // document.getElementById("c1").innerText = game.upgrades[0].name;
@@ -125,6 +125,6 @@ export function onInit(game) {
 
         newDivVert.appendChild(newDivGlobal)
 
-
+        setHeader(game.money,game.temperature)
     }
 }
