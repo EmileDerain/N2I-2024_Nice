@@ -1,9 +1,24 @@
 import Fastify from 'fastify'
+import cors from '@fastify/cors'
 import { findUser } from '../../user_service.js';
 
-let users = []
+let users = [
+  {
+    userId: "monIdCool",
+    username: "Estoult",
+    totalMoney: 102032030,
+    temperature: 3.4
+  },
+  {
+    userId: "goeCool",
+    username: "Goe",
+    totalMoney: 3233231,
+    temperature: 1.2
+  },
+]
 
 export const fastify = Fastify({ logger: true });
+await fastify.register(cors, { origin: '*' })
 
 fastify.get('/api/leaderboard', async function handler (request, reply) {
   const leaderboard = users.map(user => ({
