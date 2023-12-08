@@ -1,4 +1,5 @@
+import { updateBar } from "../index.js";
+
 export function onScore(scores) {
-    updateBar(JSON.parse(scores).d.year);
-    return scores;
+    updateBar(scores.year);
 }

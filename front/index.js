@@ -5,6 +5,7 @@ window.addEventListener('load', startWebSocket);
 
 export function updateBar(Year) {
     let progress =  (Year - 1882) / (2100 - 1882) * 100;
-    document.getElementById("time-bar-inside").style.width = `${progress}%`;
+    console.log("progress", progress);
+    document.getElementById("progress-bar").style.width = `${progress}%`;
 
 }

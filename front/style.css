@@ -83,10 +83,6 @@ body {
 .time-bar-inside {
     height: 3vh;
     background-color: rgb(100, 60, 67,0.7);
-<<<<<<< HEAD
-=======
-    animation: progressAnimation 300s linear forwards;
->>>>>>> 523b32ad313f37818daea106c261eb8073c0e4ba
 }
 
 .flex-verti-2 {
@@ -208,7 +204,7 @@ body {
 }
 
 #first_date{
-    width: 25%;
+    width: 12%;
 }
 #second_date{
     width: 100%;

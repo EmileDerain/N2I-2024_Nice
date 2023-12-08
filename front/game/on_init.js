@@ -1,8 +1,5 @@
-
-import { sendTick } from "../websocket/ws_helpers/event_sender";
-
 export let tickInterval;
-import {sendUpgrade} from "../websocket/ws_helpers/event_sender.js";
+import {sendUpgrade, sendTick} from "../websocket/ws_helpers/event_sender.js";
 
 export function onInit(game) {
     console.log("game", game);
