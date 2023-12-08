@@ -54,14 +54,16 @@ body{
 .time-bar-outside{
     height: 3vh;
     width: 70vw;
-    background-color: rgb(39, 37, 37);
     margin: 1vh;
+    background-image: url("./ressources/timebar.png");
+    background-size: cover;
 }
 
 .time-bar-inside{
     height: 3vh;
     width: 70vw;
-    background-color: pink;
+    background-color: rgb(100, 60, 67,0.5);
+    
     animation: progressAnimation 300s linear forwards;
 }
 
@@ -127,4 +129,17 @@ body{
     100% {
         width: 100%;
     }
+}
+
+.progress-part {
+    flex: 1;
+    height: 100%;
+    width: 33%;
+    background-color: #3498db;
+    border-right: 2px solid #fff; /* Ligne de séparation entre les parties */
+}
+
+/* Supprimer la bordure droite de la dernière partie */
+.progress-part:last-child {
+    border-right: none;
 }
