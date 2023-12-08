@@ -14,6 +14,7 @@ export function initGame(ws) {
             upgrades: user.game.upgrades,
         }
     }
+    return gameInfo;
 }
 
 export function createGame() {
