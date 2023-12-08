@@ -66,3 +66,13 @@ export function checkGameOver(game) {
 export function calculate_current_game_year(game) {
     return game.start_year + Math.floor((game.current_tick / 4) / 12);
 }
+
+export function getEndGameStatus(game) {
+    if (game.money < 0) {
+        return 0;
+    } else if (game.temperature >= 1.5) {
+        return 1;
+    } else if (game.current_tick >= game.total_ticks) {
+        return 2;
+    }
+}

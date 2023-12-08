@@ -1,5 +1,5 @@
 import { onInit } from "../../game/on_init.js";
-import { setUserId } from "../../game/state.js";
+import { setUserId } from "../websocket_client.js";
 
 export function onConnectionEvent(d) {
     const userId = d.userId;
