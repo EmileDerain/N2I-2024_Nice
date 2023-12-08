@@ -5,7 +5,8 @@ window.addEventListener('load', init);
 function init(){
     startWebSocket()
     notifManagement()
-    notifCreator("Introduction", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur erat dui, fringilla nec ullamcorper in, ultricies ac lorem. Integer maximus ac ipsum ut tristique. Fusce fringilla imperdiet ex, a pharetra mauris vestibulum at. Suspendisse feugiat sem non metus vulputate, sed pretium erat sollicitudin. Nulla sed orci eu ante rutrum rutrum ac non neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque quis metus neque. Sed pharetra arcu non venenatis lacinia. Nullam suscipit imperdiet dictum. Vivamus sed laoreet dolor")
+    let intro = "Bienvenue dans 'Green Of Earth', le jeu où votre mission est d'atteindre l'année 2100 en évitant les crises climatiques et financières. Pour y parvenir, explorez le menu de droite pour acheter des améliorations stratégiques. Chaque amélioration génère des revenus, mais attention, elles ont aussi un coût écologique. Équilibrez habilement vos investissements pour prospérer sans compromettre l'avenir de la planète. Serez-vous capable de guider votre civilisation vers un avenir prospère et durable avant d'atteindre le tournant crucial de l'an 2100 ? Bonne chance !"
+    notifCreator("Introduction", intro)
 }
 
 document.addEventListener('keydown', function(event) {
