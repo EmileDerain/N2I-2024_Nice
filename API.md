@@ -6,6 +6,7 @@
 | 1 | Init event | userId, game |
 | 2 | Score event | money, totalMoney, temperature, year |
 | 3 | Confirm upgrade event | upgradeId, count |
+| 4 | Game end event | type |
 
 ## Client code
 Client code needs an 'userId' parameter.
@@ -94,6 +95,25 @@ Event sent when the client iterate to the next tick.
   }
 }
 ```
+
+### Game End Event
+Event sent when the client iterate to the next tick.
+
+#### Example of Game End Event
+```
+{
+  "op": 4,
+  "d": {
+    "type": 1
+  }
+}
+```
+
+| type | Description | 
+| ------ | ----------- |
+| 0 | Lose $ |
+| 1 | Lose T° | 
+| 1 | Win | 
 
 ### Tick Event
 Event sent when the client iterate to the next tick.
