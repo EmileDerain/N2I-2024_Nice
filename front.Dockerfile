@@ -2,9 +2,9 @@ FROM node:alpine
 LABEL maintainer="Kilian Bonnet <kilian.bonnet1@etu.univ-cotedazur.fr>"
 
 WORKDIR /app
-COPY ../back /app 
+COPY ../front /app 
 
-RUN npm install
+RUN npm install -g http-server
 
-EXPOSE 3008 3007
+EXPOSE 8080
 CMD ["npm", "start"]
