@@ -1,5 +1,5 @@
 import { tickInterval } from "./on_init.js";
-import { notifCreator } from "./index.js";
+import { notifCreator } from "../index.js";
 
 
 export function onEnd(endData) {
