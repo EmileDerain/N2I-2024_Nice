@@ -40,7 +40,7 @@ export function createGame() {
     }
 }
 
-export function onGameTick(game) {
+export function onGameTick(game, user) {
     if (game.end_game) {
         return game;
     }
@@ -51,7 +51,7 @@ export function onGameTick(game) {
     game.current_tick += 1;
     game.population += 60000;
     checkGameOver(game);
-    checkUpgradeUnlock(game.upgrades, calculate_current_game_year(game));
+    checkUpgradeUnlock(game.upgrades, calculate_current_game_year(game), user);
     return game;
 }
 
