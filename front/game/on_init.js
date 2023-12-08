@@ -135,8 +135,8 @@ export function onInit(game) {
 
         newDivGlobal.appendChild(newButtonGlobal)
 
-        // if (!game.upgrades[i].isUnlock)
-        //     newDivGlobal.style.display = "none"
+        if (!game.upgrades[i].isUnlock)
+            newDivGlobal.style.display = "none"
 
         newDivVert.appendChild(newDivGlobal)
 
