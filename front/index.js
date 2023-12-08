@@ -6,6 +6,7 @@ window.addEventListener('load', init);
 function init(){
     startWebSocket()
     notifManagement()
+    notifCreator("Introduction", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur erat dui, fringilla nec ullamcorper in, ultricies ac lorem. Integer maximus ac ipsum ut tristique. Fusce fringilla imperdiet ex, a pharetra mauris vestibulum at. Suspendisse feugiat sem non metus vulputate, sed pretium erat sollicitudin. Nulla sed orci eu ante rutrum rutrum ac non neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque quis metus neque. Sed pharetra arcu non venenatis lacinia. Nullam suscipit imperdiet dictum. Vivamus sed laoreet dolor")
 }
 
 export function updateBar(Year) {
@@ -27,6 +28,12 @@ function updatePlanet(year){
 
 function notifManagement(){
     let croix = document.getElementById("notif-croix");
-    croix.addEventListener("click", ()=>{croix.classList.add("hide")})
+    croix.addEventListener("click", ()=>{document.getElementById("notif").classList.add("hide")})
 }
 
+
+function notifCreator(titre, texte){
+    document.getElementById("notif-titre").innerText=titre;
+    document.getElementById("notif-texte").innerText=texte;
+    document.getElementById("notif").classList.remove("hide")
+}
