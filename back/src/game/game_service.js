@@ -1,4 +1,4 @@
-import {buyUpgrade, calculateTotalGeneratedPerTick, initUpgrades} from "./upgrade_service.js";
+import {buyUpgrade, calculateTotalGeneratedPerTick, checkUpgradeUnlock, initUpgrades} from "./upgrade_service.js";
 import {createUser} from "../user_service.js";
 import {sendEndGameEvent} from "../api/websocket/ws_helpers/event_handler/end_game_event_handler.js";
 
@@ -34,7 +34,7 @@ export function createGame() {
         end_year: 2100,
         current_tick: 0,
         total_ticks: 2616,
-        population: 1600000,
+        population: 0,
         upgrades: initUpgrades(),
         end_game: false,
     }
@@ -49,8 +49,9 @@ export function onGameTick(game) {
     game.temperature += total_generated_per_tick.temperature;
     game.total_money += total_generated_per_tick.money;
     game.current_tick += 1;
-    game.population += 50000;
+    game.population += 60000;
     checkGameOver(game);
+    checkUpgradeUnlock(game.upgrades, calculate_current_game_year(game));
     return game;
 }
 
