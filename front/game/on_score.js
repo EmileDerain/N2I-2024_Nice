@@ -1,3 +1,4 @@
 export function onScore(scores) {
-    console.log(scores);
+    updateBar(JSON.parse(scores).d.year);
+    return scores;
 }
